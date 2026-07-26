@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Dog Cafe - HOME</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <style>
+        html { font-size: 100%; }
+        body { font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; color: #432; line-height: 1.7; margin: 0; background-color: #fff; }
+        a { text-decoration: none; }
+        img { max-width: 100%; height: auto; }
+        .wrapper { max-width: 1120px; margin: auto; padding: 0 1.5rem; }
+        .align-center { text-align: center; }
+
+        /* 白ヘッダー・肉球ロゴ固定 */
+        .page-header {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .logo { height: 45px; width: auto; display: block; }
+        .main-nav { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+        .main-nav a { color: #333333; font-weight: bold; font-size: 1.2rem; }
+        .main-nav a:hover { color: #0088cc; }
+
+        /* トップカバー（画像のファイル名をcover-home-lに変更） */
+        .sub-cover {
+            background-image: url('images/cover-home-l.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .page-title { font-size: 3rem; color: #ffffff; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); margin: 0; }
+
+        .heading-medium { text-align: center; color: #0088cc; font-weight: bold; margin-bottom: 1.5rem; font-size: 1.8rem; }
+        .btn { display: inline-block; background-color: #0088cc; color: #fff; border-radius: 8px; padding: 0.6rem 2rem; margin-top: 1rem; font-weight: bold; }
+
+        /* フッター */
+        .page-footer { background-image: url('images/footer-l.jpg'); background-size: cover; background-position: center; padding-top: 4rem; margin-top: 4rem; }
+        .info { width: 100%; max-width: 500px; margin: auto; border-spacing: 0; }
+        .info th, .info td { border-bottom: 1px solid #c9c2bc; padding: 0.8rem; }
+        .info th { text-align: left; font-weight: normal; }
+        .copyright { background-color: #432; text-align: center; padding: 1.5rem 0; margin-top: 3rem; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <h1 style="margin:0;">
+            <a href="index.html"><img class="logo" src="images/logo.png" alt="Smile Dog Cafe"></a>
+        </h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="news.html">News</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sub-cover">
+        <h2 class="page-title">Smile Dog Cafe</h2>
+    </div>
+
+    <main class="wrapper">
+        <section class="align-center" style="margin: 3rem 0;">
+            <h3 class="heading-medium">About</h3>
+            <p style="margin-top: 1.5rem; line-height: 2;">
+                Smile Dog Cafeへようこそ！<br>
+                当店は愛犬と一緒に本格的なコーヒーや自家製スイーツを楽しめるドッグカフェです。<br>
+                わんちゃん用の無添加手作りメニューも豊富にご用意しております。<br>
+                広々とした落ち着いた空間で、特別なひとときをお過ごしください。
+            </p>
+            <a href="menu.html" class="btn" style="margin-top: 2rem;">メニューを見る</a>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <table class="info">
+            <tr><th>住所</th><td>東京都港区六本木0-0 ○○○</td></tr>
+            <tr><th>電話</th><td>03-1111-xxxx</td></tr>
+            <tr><th>営業時間</th><td>10:00 ~ 20:00</td></tr>
+            <tr><th>店休日</th><td>水曜</td></tr>
+        </table>
+        <div class="copyright">
+            <small>&copy;Smile Cafe A25DC072 見延優菜</small>
+        </div>
+    </footer>
+
+</body>
+</html>

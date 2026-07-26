@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† Black Dream Garden † - GALLERY</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 【STEP 1】Fancybox の CSS を読み込み -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+
+<section class="container">
+    <h1>† GALLERY †</h1>
+
+    <!-- サイトの上部説明エリア -->
+    <div class="gallery-intro">
+        <p>ここでは、恥ずかしながら描いた繪を恥ずかしながら展示してあります。まだ、数がありませんが徐々に増えるでしょう。おそらく。</p>
+        <p>左右にある繪をクリックするとフルサイズで表示されます。</p>
+    </div>
+
+    <div class="navi">
+        <a href="index.html">【TOPに戻る】</a>
+    </div>
+
+    <!-- ギャラリーコンテンツエリア -->
+    <div class="gallery-list-zun">
+
+        <!-- 1枚目 -->
+        <div class="gallery-section">
+            <div class="section-bar">
+                <span class="bar-date">202■/10/05</span>
+                <span class="bar-title"><a href="#">★電波、届いた？★</a></span>
+            </div>
+            <div class="section-content img-right">
+                <div class="section-text">
+                    <p>去年の学祭の漫研で展示しイラストです。とある成人向けゲームのヒロインが元ネタだったりします。晴れた日はよく届くから……</p>
+                </div>
+                <div class="section-images">
+                    <a href="images/art01.jpg" data-fancybox="gallery" data-caption="セーラー猫耳系しょうじょ">
+                        <img src="images/art01.jpg" alt="イラスト1" style="max-width: 180px; height: auto; border: 1px solid #333333;">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2枚目 -->
+        <div class="gallery-section">
+            <div class="section-bar">
+                <span class="bar-date">202■/10/12</span>
+                <span class="bar-title"><a href="#">★この人を■してください★</a></span>
+            </div>
+            <div class="section-content img-left">
+                <div class="section-images">
+                    <a href="images/art02.jpg" data-fancybox="gallery" data-caption="ゆくえふめいしゃ">
+                        <img src="images/art02.jpg" alt="イラスト2" style="max-width: 180px; height: auto; border: 1px solid #333333;">
+                    </a>
+                </div>
+                <div class="section-text">
+                    <p>この絵だけ東方projectの二次創作です。前やってた行方不明展に影響されてこれを作った記憶があります。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3枚目 -->
+        <div class="gallery-section">
+            <div class="section-bar">
+                <span class="bar-date">202■/10/13</span>
+                <span class="bar-title"><a href="#">★黒き乙女★</a></span>
+            </div>
+            <div class="section-content img-right">
+                <div class="section-text">
+                    <p>知り合いのオリキャラさんです。傘を描くのに苦労したような。</p>
+                </div>
+                <div class="section-images">
+                    <a href="images/art03.jpg" data-fancybox="gallery" data-caption="黒髪ぱっつん着物しょうじょ">
+                        <img src="images/art03.jpg" alt="イラスト3" style="max-width: 180px; height: auto; border: 1px solid #333333;">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4枚目） -->
+        <div class="gallery-section">
+            <div class="section-bar">
+                <span class="bar-date">202■/10/15</span>
+                <span class="bar-title"><a href="#">★えいえんのねむり★</a></span>
+            </div>
+            <div class="section-content img-left">
+                <div class="section-images">
+                    <a href="images/art04.jpg" data-fancybox="gallery" data-caption="わたしだけの■■■">
+                        <img src="images/art04.jpg" alt="イラスト4" style="max-width: 180px; height: auto; border: 1px solid #333333;">
+                    </a>
+                </div>
+                <div class="section-text">
+                    <p>一枚目の子と同一人物です。これは学祭の漫研のスペースで実際にイラストカードとして売られていました。どうやら割と好評だったようです。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gallery-back">
+        <a href="#" onclick="history.back(); return false;">戻る</a>
+    </div>
+    
+
+</section>
+
+<footer>
+    Copyright © a25dc033 佐藤柚花 All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<script>
+    Fancybox.bind("[data-fancybox]", {
+        loop: true,
+        Hash: false,
+    });
+</script>
+<script src="js/script.js"></script>
+</body> 
+</body>
+</html>

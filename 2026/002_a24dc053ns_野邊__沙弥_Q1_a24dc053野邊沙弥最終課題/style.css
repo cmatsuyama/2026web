@@ -1,0 +1,88 @@
+/* ===== 全体設定 ===== */
+body {
+    font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffaf0;
+    color: #333;
+  }
+  
+  /* ===== ヘッダー ===== */
+  header {
+    background: #ffcc66;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  /* ===== メインコンテンツ ===== */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .intro {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .intro p {
+    margin: 5px 0;
+  }
+  
+  /* ===== メンバー一覧 ===== */
+  .member-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .member {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .member h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ffd28a;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #cc7a00;
+  }
+  
+  .contact {
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== フッター ===== */
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #eee;
+  }
+  
+  a {
+    color: #cc6600;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

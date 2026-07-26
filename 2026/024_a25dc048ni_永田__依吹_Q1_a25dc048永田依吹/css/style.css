@@ -1,0 +1,471 @@
+@charset "UTF-8";
+
+/* --- 共通 --- */
+:root {
+    /* テーマカラー */
+    --main-color: #d3c496;
+    --accent-color: #868253;
+    --bg-color: #323b23;
+    --text-color: #ffffff;
+    
+    /* フォント指定 */
+    --font-ja: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    --font-en: 'shippori Mincho';
+  }
+  
+  body {
+    font-family: var(--font-ja);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.7;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+  
+  /* ---レイアウト--- */
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  /* ---ヘッダー--- */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    padding: 0 5%;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 500px;
+  }
+  
+  .main-nav {
+    display: flex;
+    list-style: none;
+  }
+  
+  .main-nav li {
+    margin-left: 30px;
+    font-size: 1.1rem;
+  }
+  
+  /* --- フッター--- */
+  .page-footer {
+    background-color: #dfd4b6;
+    color: #36380b;
+    padding: 60px 0 20px 0;
+    text-align: center;
+    font-family: 'shippori Mincho', serif;
+  }
+  
+  .page-footer .info {
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .page-footer th,
+  .page-footer td {
+    padding: 20px 10px;
+  }
+  
+  .page-footer th {
+    width: 30%;
+    font-weight: bold;
+  }
+
+  .page-footer .info {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .page-footer .info tr {
+    border-bottom: 1px solid #36380b;
+  }
+  .copyright {
+    margin-top: 40px;
+    font-size: 0.85rem;
+  }
+  
+  /* ホーム用カバー */
+  .cover-home {
+    position: relative;
+    background-image: url(../images/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+  }
+  
+  /* 下層ページ共通カバー */
+  .sub-cover {
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cover-news {
+    background-image: url(../images/news-bg.jpg);
+  }
+  
+  .cover-menu {
+    background-image: url(../images/menu-bg.jpg);
+  }
+  
+  .cover-contact {
+    background-image: url(../images/contact-bg.jpg);
+  }
+  
+  /* --- タイトル・見出しスタイル --- */
+  .font-english {
+    font-family: var(--font-en);
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.253);
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .heading-large {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .heading-medium {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+  }
+  
+  /* ---ボタンなど-------- */
+  .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-family: 'shippori Mincho', serif;
+  }
+  
+  /* --- ホーム　------ */
+  .about {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 80px 0;
+    text-align: center;
+    max-width: 100%;
+    background-image: url(../images/home-below.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+  }
+  
+  .about h3,
+  .about p,
+  .about .align-center {
+    position: relative;
+    z-index: 1;
+  }
+  .about p {
+    width: 70%;
+    margin: 0 auto 40px;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 2;
+    font-family: 'shippori Mincho', serif;
+  }
+  
+  /* --- メニュー--- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 0;
+  }
+  
+  .item {
+    background-color: #485b336d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.146);
+    border-radius: 4px;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .item p {
+    font-family: 'shippori Mincho', serif;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  /* 大きく表示するメニュー */
+  .item-big {
+    grid-column: span 2;
+    grid-row: span 2;
+    flex-direction: column;
+  }
+  .item-big img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    max-height: 420px;
+    object-fit: cover;
+  }
+  .item-big p {
+    line-height: 60px;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0;
+  }
+  
+  /* --- ニュース--- */
+  .news-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    font-family: 'shippori Mincho', serif;
+  }
+  
+  .post {
+    width: 68%;
+  }
+  
+  .post-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .post-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-cat {
+    display: flex;
+    list-style: none;
+  }
+  
+  .post-cat li {
+    margin-right: 10px;
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    border-radius: 2px;
+  }
+  
+  .post-thumbnail {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .post p {
+    margin-bottom: 20px;
+    font-family: 'shippori Mincho', serif;
+  }
+  
+  /* サイドバー */
+  .sidebar {
+    width: 28%;
+  }
+  
+  .side-menu {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  
+  .side-menu li {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .side-menu a {
+    display: block;
+    padding: 12px 0;
+  }
+  
+  /* --- お問い合わせ --- */
+  .location {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    font-family: 'shippori Mincho', serif;
+  }
+  
+  .location-info {
+    width: 45%;
+  }
+  
+  .location-map {
+    width: 50%;
+  }
+  
+  .location-map iframe {
+    width: 100%;
+  }
+  
+  .location-info th,
+  .location-info td {
+    padding: 20px 10px;
+  }
+
+  .location-info tr {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .location-info th {
+    width: 30%;
+    text-align: left;
+  }
+
+  .location-info td {
+    padding-left: 25px;
+  }
+
+  .location-info table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .email {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--white);
+    margin-bottom: 60px;
+    border-radius: 6px;
+  }
+  
+  .email p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+    font-family: 'shippori Mincho', serif;
+  }
+
+  @media (max-width: 1200px) {
+    .wrapper {
+      padding: 0 7%
+    }
+  }
+    
+  
+  /* ---  レスポンシブ  --- */
+  @media (max-width: 768px) {
+    .wrapper {
+      padding: 0 8%;
+    }
+
+    .logo {
+      content: url(../images/logo-white.png);
+      width: 100px;
+    }
+    .page-header {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+    }
+    
+    .main-nav {
+      margin-top: 20px;
+      padding: 0;
+    }
+    
+    .main-nav li {
+      margin: 0 15px;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .item-big {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    .item-big img {
+      height: 200px;
+    }
+    
+    .news-contents,
+    .location,
+    .sns {
+      flex-direction: column;
+    }
+    
+    .post,
+    .sidebar,
+    .location-info,
+    .location-map,
+    .sns-item {
+      width: 100%;
+    }
+    
+    .sidebar {
+      margin-top: 40px;
+    }
+    
+    .location-map {
+      margin-top: 30px;
+    }
+  }

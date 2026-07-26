@@ -1,0 +1,587 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic proN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+/*レイアウト*/
+.align-center {
+    text-align: center;
+}
+
+/*見出し*/
+.font-english {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: normal;
+}
+
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.page-title,
+.heading-large {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.page-title {
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+
+.heading-large {
+    margin-bottom: 1rem;
+}
+
+/*ヘッダー*/
+.page-header {
+    padding-top: .5rem;
+}
+
+.logo {
+    width: 210px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.main-nav a {
+    color: #432;
+}
+
+.main-nav a:hover {
+    color: #0bd
+}
+
+.cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
+
+.sub-cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 528px;
+    margin-bottom: 4rem;
+}
+/*home*/
+.cover-home {
+    background-image: url(../images/cover-home-s.jpg);
+}
+
+.home-page {
+    background-color: #FFF0F5;
+}
+
+.hero-image {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hero-image img {
+    width: 85%;
+    max-width: 700px;
+    border-radius: 5px;
+}
+
+.about {
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 4rem;
+}
+
+.about h3 {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    background-color: #DDF5F7;
+    border-radius: 30px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 60px auto 0;
+    line-height: 2;
+}
+
+.about .align-center {
+    margin-top: 100px;
+}
+
+/* MUSIC */
+
+.cover-music {
+    background-image: url(../images/cover-home-s.jpg);
+}
+.music-page {
+    background-color: #FFF5F8;
+}
+
+/* おすすめ楽曲のタイトル */
+.music-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* 初めての方にもおすすめしたい4曲をご紹介します。 */
+.music header p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+/* 曲ごとのタイトル・動画 */
+.music .sns {
+    margin-top: 50px;
+}
+
+/* 曲のタイトル */
+.music .sns h3 {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 32px;
+    text-align: center;
+    background-color: #DDF5F7;
+    color: #432;
+    border-radius: 50px;
+    padding: 10px 40px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 動画の下の説明文 */
+.music .sns+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+/*SNS*/
+.sns-item {
+    margin-bottom: 2rem;
+}
+
+.sns-item .heading-medium {
+    margin-bottom: .5rem;
+}
+
+.sns-youtube {
+    aspect-ratio: 16/9;
+}
+
+.sns-youtube iframe {
+    height: 100%;
+}
+
+/*Official-SNS*/
+.official-sns {
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 20px;
+}
+
+.official-sns h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.official-sns p {
+    font-size: 17px;
+    margin-bottom: 60px; 
+}
+
+.sns-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sns-buttons a {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background-color: #DDF5F7;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sns-buttons a:hover {
+    opacity: 0.7;
+}
+/* MEMBER */
+.member-page {
+    background-color: #FFF5F8;
+}
+
+.cover-member {
+    background-image: url(../images/member-top-l.jpg);
+}
+
+.grid {
+    display: grid;
+    gap: 2rem 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+.member img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.member p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.member h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    padding: 8px 25px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* メンバーカラー */
+
+.rinu-name {
+    background-color: #F15B6C;
+}
+
+.root-name {
+    background-color: #FFD84D;
+    color: #432;
+}
+
+.satomi-name {
+    background-color: #FF9EB5;
+}
+
+.colon-name {
+    background-color: #7DD3F7;
+}
+
+.nanamori-name {
+    background-color: #B78BDB;
+}
+
+.jel-name {
+    background-color: #FF9A3D;
+}
+
+.source {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.source h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.source ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.source li {
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+/*LIVE*/
+.cover-live {
+    background-image: url(../images/cover-home-s.jpg);
+}
+.live-page {
+    background-color: #FFF5F8;
+}
+
+.live-catch {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin: 80px 0 40px;
+}
+
+.live-image {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin: 120px auto 50px;
+    border-radius: 15px;
+}
+
+.live-heading {
+    display: inline-block;
+    background-color: #FFD6E7;
+    border-radius: 50px;
+    padding: 6px 25px;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.live-about,
+.live-point {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 1.5rem;
+}
+
+.live-point li {
+    margin: 15px 0;
+}
+
+/*ボタン*/
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #5BC0DE;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5;
+}
+
+.btn:hover {
+    background-color: #0090aa;
+}
+
+/*iframe*/
+iframe {
+    width: 100%;
+}
+
+/*フッダー*/
+.page-footer {
+    background-image: url(../images/footer-s.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 12rem;
+}
+
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+}
+
+.info th,
+.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+
+.info td {
+    padding: 1rem 0;
+}
+
+/*コピーライト*/
+.coppyright {
+    background-color: #432;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+/*デスクトップ版*/
+@media(min-width: 800px) {
+
+    /*見出し*/
+    .page-title {
+        font-size: 5rem;
+    }
+
+    .heading-large {
+        font-size: 4rem;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    /*ヘッダー*/
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    }
+
+    .main-nav {
+        font-size: 2rem;
+    }
+
+    /*ヘッダーカバー画像*/
+    .sub-cover {
+        height: 400px;
+        margin-bottom: 6rem;
+    }
+
+    /*HOME*/
+    .cover-home {
+        background-image: url(../images/cover-home-l.jpg);
+    }
+
+    .about {
+        margin: 4rem auto 0;
+    }
+    .hero-image {
+        margin-top: -10px;
+    }
+
+    .page-title {
+        margin-top: 3rem;
+    }
+
+    /* MUSIC */
+    .cover-music {
+        background-image: url(../images/cover-home-l.jpg);
+    }
+    .music-contents {
+        display: block;
+    }
+    
+    .official-sns {
+        text-align: center;
+        margin: 100px auto 0;
+        padding: 50px 20px;
+    }
+
+    .post {
+        width: 70%;
+    }
+
+    /* MEMBER */
+    .cover-member {
+        background-image: url(../images/member-top-l.jpg);
+    }
+
+    .grid {
+        gap: 3rem 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .member img {
+        margin-bottom: 1rem;
+    }
+
+    .member p {
+        font-size: 1rem;
+    }
+
+
+    /*LIVE*/
+    .cover-live {
+        background-image: url(../images/cover-home-l.jpg);
+    }
+
+    .live-catch {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 150px 0 50px;
+    }
+    
+    .live-image {
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto 80px;
+        border-radius: 20px;
+    }
+    
+    .live-about,
+    .live-point {
+        max-width: 700px;
+        margin: 80px auto;
+        text-align: center;
+    }
+    
+    .live-heading {
+        display: inline-block;
+        background-color: #FFD6E7;
+        border-radius: 50px;
+        padding: 8px 35px;
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    
+    .live-about p {
+        font-size: 18px;
+        line-height: 2;
+    }
+    
+    .live-point ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .live-point li {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+        font-size: 18px;
+    }
+    
+    .live-point strong {
+        font-size: 22px;
+    }
+/*フッダー*/
+.page-footer {
+    background-image: url(../images/footer-l.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 12rem;
+}
+
+.info th {
+    padding-left: 2.5rem;
+}
+}

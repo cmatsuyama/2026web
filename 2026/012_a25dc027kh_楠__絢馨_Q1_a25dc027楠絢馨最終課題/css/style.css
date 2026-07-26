@@ -1,0 +1,562 @@
+@charset "UTF-8";
+
+/*　共通部分*/
+html {
+    font-size: 120%;
+}
+
+body {
+    font-family: "Shippori Mincho", serif;
+    line-height: 1.7;
+    color: rgb(87, 49, 141);
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    margin: center;
+}
+
+/*レイアウト*/
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/*見出し*/
+.font-english {
+    font-family: "Shippori Mincho", serif;
+    font-weight: normal;
+}
+
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.page-title {
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+
+.heading-title {
+    margin-bottom: 1rem;
+}
+
+.mannnaka {
+    margin-bottom: 1rem;
+}
+
+/*ヘッダー*/
+.page-header {
+    padding-top: .5rem;
+}
+
+.logo {
+    width: 70px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.main-nav a {
+    color: rgb(248, 129, 45);
+}
+
+.main-nav a:hover {
+    color: rgb(214, 110, 41);
+}
+
+.cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
+
+.sub-cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 528px;
+    margin-bottom: 4rem;
+}
+
+/*home*/
+.cover-home {
+    background-image: url(../images/IMG_8762.JPG);
+}
+
+.about {
+    max-width: 736px;
+    padding: 01.5rem;
+    margin: 3rem auto 0;
+}
+
+.about p {
+    margin-bottom: 3rem;
+}
+
+/*ナポリ紹介文*/
+.murasaki {
+    color: #733abd;
+}
+
+.mozi {
+    font-size: 130%;
+}
+
+.kiiro {
+    color: #ead04f;
+}
+
+.midori {
+    color: #75e53d;
+}
+
+.ao {
+    color: #3677df;
+}
+
+.mozi1 {
+    font-size: 130%;
+}
+
+.mozi2 {
+    font-size: 130%;
+}
+
+.mozi3 {
+    font-size: 130%;
+}
+
+/*ナポ男*/
+.cover-news {
+    background-image: url(../images/IMG_8746.JPG);
+}
+
+.grid {
+    display: grid;
+    gap: 2rem 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+.item img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.item p {
+    font-size: .875rem;
+}
+
+
+/*記事部分*/
+.post {
+    margin-bottom: 3rem;
+}
+
+.post-title {
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+}
+
+.post-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.post-cat {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+}
+
+.post-cat a {
+    color: rgb(244, 114, 35);
+    background-color: #ccaae5;
+    border-radius: 8px;
+    font-size: .875rem;
+    padding: .5rem .75rem;
+}
+
+.post-cat a:hover {
+    background-color: #af9fdd;
+}
+
+.post-date {
+    font-size: .875rem;
+}
+
+.post-thumbnail {
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.post p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+
+/*見出し*/
+.font-english {
+    font-family: "Shippori Mincho", serif;
+    font-weight: normal;
+}
+
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/*サイドバー*/
+.side-menu {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.side-menu li {
+    border-bottom: 1px solid #c9c2bc;
+}
+
+.side-menu a {
+    color: rgb(249, 138, 69);
+    display: block;
+    padding: 1rem;
+}
+
+.side-menu a:hover {
+    color: rgb(173, 67, 34);
+}
+
+/*twitter*/
+.cover-menu {
+    background-image: url(../images/Xaicon.jpg);
+}
+
+.grid {
+    display: grid;
+    gap: 2rem 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+.item img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.item p {
+    font-size: .875rem;
+}
+
+/* CONTACT
+------------------------------- */
+.cover-contact {
+    background-image: url(../images//IMG_8762.JPG);
+}
+
+/*店舗情報*/
+.location {
+    margin-bottom: 3.5rem;
+}
+
+.location-info {
+    margin-bottom: 2rem;
+}
+
+.location-info.info {
+    padding: 0;
+}
+
+/*お問い合わせ*/
+.email {
+    max-width: 916px;
+    background-color: #faf7f0;
+    border-radius: 48px;
+    padding: 1.5rem 2.5rem 2.5rem;
+    margin: 0 auto 2rem;
+}
+
+.email p {
+    margin: 1rem 0 2rem;
+}
+
+.setumei {
+    max-width: 916px;
+    background-color: #faf7f0;
+    border-radius: 48px;
+    padding: 1.5rem 2.5rem 2.5rem;
+    margin: 0 auto 2rem;
+}
+
+.setumei p {
+    margin: 1rem 0 2rem;
+}
+
+/*SNS*/
+.sns-item {
+    margin-bottom: 2rem;
+}
+
+.sns-item .heading-medium {
+    margin-bottom: .5rem;
+}
+
+.sns-youtube {
+    aspect-ratio: 16/9;
+    aspect-ratio: 16/9;
+}
+
+.sns-youtube iframe {
+    height: 100%;
+}
+
+/*ボタン*/
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: rgb(255, 107, 43);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: #d14b2d;
+}
+
+/*iframe*/
+iframe {
+    width: 100%;
+}
+
+/*フッター*/
+.page-footer {
+    background-image: url(../images/footer-s.webp);
+    background-size: cover;
+    background-position: center;
+    padding-top: 12rem;
+}
+
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 1.5rem;
+    border-spacing: 0;
+
+}
+
+.info th,
+.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+
+.info td {
+    padding: 1rem 0;
+}
+
+.copyright {
+    background-color: rgb(244, 115, 35);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+/*デスクトップ版*/
+@media (min-width: 800px) {
+
+    /*見出し*/
+    .page-title {
+        font-size: 5rem;
+    }
+
+    .heading-large {
+        font-size: 4rem;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    /*ヘッダー*/
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        position: relative;
+        
+    }
+
+    .main-nav {
+        font-size: 2rem;
+    }
+
+    /*ヘッダーカバー画像*/
+    .sud-cover {
+        height: 100px;
+        margin-bottom: 6rem;
+    }
+
+    /*HOME*/
+    .cover-home {
+        background-image: url(../images/usirohaikei.jpg);
+    }
+
+    .about {
+        margin: 2rem auto 0;
+    }
+
+    /*ナポ男*/
+    .cover-news {
+        background-image: url(../images/4829-3405-3a51f505e05aadb5d05cbb0a98ab854f-960x400.webp);
+    }
+
+    .news-contents {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 50%;
+    }
+
+    .sidebar .heading-medium {
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    /*Twitter*/
+    .cover-menu {
+        background-image: url(../images/usirohaikei.jpg);
+    }
+
+    .grid {
+        gap: 3rem 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item img {
+        margin-bottom: 2rem;
+    }
+
+    .item p {
+        font-size: 1rem;
+    }
+
+    .item-big {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .item-big img {
+        height: 80%;
+        width: 100%;
+    }
+
+    /*CONTACT*/
+    .cover-contact {
+        background-image: url(../images/usirohaikei.jpg);
+    }
+
+
+
+    .location-info .info th {
+        padding-left: 2rem;
+    }
+
+    .location-map {
+        width: 100%;
+    }
+
+    .email {
+        margin-bottom: 4rem;
+    }
+
+    .setumei {
+        margin-bottom: 4rem;
+    }
+
+    .sns {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+
+
+
+    /*フッター*/
+    .page-footer {
+        background-image: url(../images/footer-l.webp);
+        padding-top: 12rem;
+    }
+
+    .info th {
+        padding-left: 2.5rem;
+    }
+
+
+    /* 全体を囲むエリア */
+    .youtube-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* 動画の枠 */
+    .youtube-container {
+        width: 100%;
+    }
+
+    .youtube-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+    }
+
+    .youtube-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}

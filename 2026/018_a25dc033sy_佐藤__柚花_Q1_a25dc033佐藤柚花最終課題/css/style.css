@@ -1,0 +1,830 @@
+html, body {
+    background-color: #000000 !important;
+    color: #cccccc; 
+    font-family: "MS <span>P</span>Gothic", "MS Gothic", "Hiragino Kaku Gothic ProN", sans-serif; /* 2000年代のあのフォント感 */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+::selection {
+    background: #ff0055;
+    color: #ffffff;
+}
+::-moz-selection {
+    background: #ff0055;
+    color: #ffffff;
+}
+
+a {
+    color: #00ffcc; /* 毒々しい水色 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff0055; /* ホバーでダークレッドに */
+    text-shadow: 0 0 5px #ff0055, 0 0 10px #ff0055; /* ネオンのように発光 */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #251a25;
+    border: 1px solid #7b00ff;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #7b00ff;
+}
+
+/* 全体のリセットと背景・文字色 */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "MS Pゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+a {
+    color: #00ffcc; /* ネオン系の色 */
+    text-decoration: none; /* 普段は下線なし */
+}
+
+a:hover {
+    color: #ff00ff; /* ホバーで色変化 */
+    text-decoration: underline; /* ホバーで下線出現 */
+    position: relative;
+    top: 1px; /* ちょっと沈む演出 */
+}
+
+/* 枠線のデザイン（ドット絵風の1px点線） */
+.update, .kiriban {
+    border: 1px dashed #444444;
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    max-width: 500px;
+    background-color: #111111;
+}
+
+h1 {
+    color: #ff0055;
+    font-size: 24px;
+    text-shadow: 0 0 5px #ff0055; /* ほんのり光らせる */
+}
+
+h2 {
+    font-size: 16px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.warn {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* スクロールバーのカスタム */
+html {
+    scrollbar-color: #ff0055 #111111;
+}
+
+.gallery-intro {
+    text-align: left;
+    max-width: 650px;
+    margin: 30px auto;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ギャラリー全体の並び */
+.gallery-list-zun {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.gallery-section {
+    margin-bottom: 50px;
+}
+
+.section-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #cca300;
+    border-bottom: 1px dashed #cca300;
+    background: linear-gradient(90deg, rgba(204,163,0,0.15) 0%, rgba(0,0,0,0) 100%);
+    padding: 6px 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.bar-date {
+    color: #cca300; /* くすんだ金色 */
+    font-weight: bold;
+}
+
+.bar-title a {
+    color: #cca300;
+    text-decoration: underline;
+}
+.bar-title a:hover {
+    color: #ffff00;
+}
+
+/* コンテンツ部分（Flexboxを使って綺麗に整列） */
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 200px;
+}
+
+/* テキストエリアの幅調整 */
+.section-text {
+    flex: 1;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* 画像表示エリア */
+.section-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.section-images img {
+    cursor: zoom-in; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 画像にホバーしたときのちょっとした演出 */
+.section-images img:hover {
+    transform: scale(1.03); /* ほんの少し大きく */
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.5); /* ほんのり赤く光らせる */
+}
+
+/* スマホ対応：画面が狭いときは縦並びにする */
+@media (max-width: 600px) {
+    .section-content {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .section-text {
+        text-align: center;
+        order: 2; /* テキストを下にする */
+    }
+    .section-images {
+        order: 1; /* 画像を上にする */
+        margin-bottom: 15px;
+    }
+}
+
+/* 下部の「戻る」ボタン */
+.gallery-back {
+    margin: 50px 0;
+    font-size: 14px;
+}
+.gallery-back a {
+    color: #888888;
+}
+
+.modal {
+    display: none; /* 普段は非表示 */
+    position: fixed;
+    z-index: 9999; /* 一番手前に表示 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* 背景をかなり暗い黒にする（透明度90%） */
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out; /* クリックしたら閉じられることを示すカーソル */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ポップアップを閉じる「×」ボタン */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ff0055;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.modal-close:hover {
+    color: #00ffcc;
+}
+
+/* ポップアップ画像の外枠（赤い枠線とネオン風の影） */
+.modal-content-box {
+    background-color: #0d0d0d;
+    border: 1px solid #ff0055;
+    padding: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0px 0px 25px #ff0055; /* 赤く光るエフェクト */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ポップアップ内に拡大表示される画像自体の設定 */
+#modal-target img {
+    max-width: 100%;
+    max-height: 80vh; /* 画面の高さの80%までに収める（はみ出し防止） */
+    width: auto;
+    height: auto;
+    display: block;
+    border: 1px solid #222222;
+}
+
+.profile-layout {
+    display: flex;
+    max-width: 650px;
+    margin: 40px auto;
+    gap: 40px;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.6); /* ほんのり背景を明るくして立体感を出す */
+    border: 1px solid #333333;
+    padding: 30px;
+}
+
+/* アバター画像の設定 */
+.profile-left {
+    flex-shrink: 0;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ff0055; /* 赤い細枠 */
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.4); /* じわっと赤く光るエフェクト */
+}
+
+/* プロフィール表（テーブル）の設定 */
+.profile-right {
+    flex: 1;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.profile-table th {
+    width: 30%;
+    color: #cca300; 
+    font-size: 13px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #333333;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.profile-table td {
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px dashed #333333;
+    color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .profile-layout {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .profile-table th, .profile-table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+    .profile-table td {
+        border-bottom: 1px dashed #333333;
+        padding-left: 0;
+    }
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333333;
+    padding: 30px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: #cca300; 
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group .required {
+    color: #ff0055; /* 必須項目の赤いコメ印 */
+    margin-left: 5px;
+}
+
+/* 入力エリア（テキストボックス・セレクト・テキストエリア）の共通設定 */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d0d0d; /* 真っ黒 */
+    border: 1px solid #555555;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 入力中の枠線が光るエフェクト */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff0055;
+    box-shadow: 0 0 8px rgba(255, 0, 85, 0.5);
+}
+
+/* プルダウンメニュー（セレクトボックス）の選択肢背景を黒にする */
+.form-group select option {
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+/* 送信ボタンの装飾（あのアングラ個人サイトの怪しいボタン） */
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-btn {
+    background-color: #0d0d0d;
+    color: #ff0055;
+    border: 1px solid #ff0055;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    color: #00ffcc; /* ホバーするとネオングリーンに変化 */
+    border-color: #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+/* 13月13日：夢の中のログ [DREAM] - 紫色に怪しく光るネオン */
+.log-item .tag-new[style*="background-color: #7b00ff"] {
+    background-color: #7b00ff !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 8px rgba(123, 0, 255, 0.8);
+    text-shadow: 0 0 3px #ffffff;
+}
+
+/* ぬいぐるみのログ [PLUSH] - ぬいぐるみ着ぐるみカラーのオレンジ＆イエロー */
+.log-item .tag-update[style*="background-color: #ffaa00"] {
+    background-color: #ffaa00 !important;
+    color: #000000 !important;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+}
+
+/* 青髪ちゃんのバグ修正 [NOISE] - サイバーパンクなネオンミントグリーン */
+.log-item .tag-fix[style*="background-color: #00ffcc"] {
+    background-color: #00ffcc !important;
+    color: #000000 !important;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
+}
+
+/* 黒和服の少女の裏コマンド [SECRET] - 警告のような禍々しい赤ネオン */
+.log-item .tag-new[style*="background-color: #ff0055"] {
+    background-color: #ff0055 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 8px rgba(255, 0, 85, 0.8);
+    text-shadow: 0 0 3px #ffffff;
+}
+
+/* 壊れた日付やオカルトなログのテキストを少し不穏に傾ける */
+.log-item:has([style*="font-style: italic"]) .log-content {
+    color: #888888;
+    font-family: "Georgia", serif;
+    letter-spacing: 0.05em;
+}
+
+.diary-lead {
+    text-align: center;
+    color: #888888;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.diary-section {
+    max-width: 650px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+/* 夢日記カード基本 */
+.diary-card {
+    background: rgba(18, 15, 18, 0.85); /* ほんのり紫がかった黒 */
+    border: 1px solid #3a2d3a;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    transition: transform 0.2s;
+}
+
+.diary-card:hover {
+    transform: scale(1.01);
+    border-color: #7b00ff; /* ホバーすると怪しく紫に光る */
+}
+
+/* 夢のタイトル */
+.diary-header {
+    border-bottom: 1px solid #7b00ff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.diary-title {
+    font-size: 14px;
+    color: #ff0077; /* ドリーミーなピンク赤 */
+    font-weight: bold;
+    font-family: "Georgia", serif;
+}
+
+/* 夢の本文 */
+.diary-body {
+    color: #cccccc;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.diary-body p {
+    margin-bottom: 15px;
+}
+
+.diary-body p:last-child {
+    margin-bottom: 0;
+}
+
+.card-nightmare {
+    border: 1px solid #ff0033;
+    background: rgba(25, 10, 10, 0.9);
+}
+
+.card-nightmare .diary-title {
+    color: #ff0033 !important; /* 血のような赤 */
+}
+
+.nightmare-warning {
+    color: #ff0033;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.diary-divider {
+    border-top: 1px dashed #ff0033;
+    margin: 15px 0;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .diary-card {
+        padding: 15px;
+    }
+}
+
+.bug-text {
+    position: relative;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* マウスを乗せたときに激しくブレるアニメーション */
+.bug-text:hover {
+    animation: textGlitch 0.3s infinite;
+    color: #ff0055; /* バグったときは赤く光る */
+    text-shadow: -2px 0 #00ffcc, 2px 0 #7b00ff; /* サイケデリックな色ズレ */
+}
+
+/* 擬似要素を使って文字を複製し、ズレを作る */
+.bug-text:hover::before,
+.bug-text:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 15, 18, 0.9);
+}
+
+.bug-text:hover::before {
+    left: 2px;
+    text-shadow: -1px 0 #00ffcc;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitchSkew 1s infinite linear alternate-reverse;
+}
+
+.bug-text:hover::after {
+    left: -2px;
+    text-shadow: -1px 0 #7b00ff;
+    clip: rect(85px, 450px, 140px, 0);
+    animation: glitchSkew 0.5s infinite linear alternate-reverse;
+}
+
+/* 激しい振動のアニメーション */
+@keyframes textGlitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-1px, 1px); }
+    40% { transform: translate(-1px, -1px); }
+    60% { transform: translate(1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitchSkew {
+    0% { clip: rect(10px, 9999px, 30px, 0); }
+    20% { clip: rect(65px, 9999px, 85px, 0); }
+    40% { clip: rect(30px, 9999px, 75px, 0); }
+    60% { clip: rect(80px, 9999px, 5px, 0); }
+    80% { clip: rect(50px, 9999px, 90px, 0); }
+    100% { clip: rect(15px, 9999px, 40px, 0); }
+}
+
+.screen-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    ), linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.06),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.06)
+    );
+    background-size: 100% 4px, 6px 100%; /* 横縞ノイズ */
+    pointer-events: none; /* クリックを邪魔しない */
+    z-index: 99999; /* 一番手前に表示 */
+    opacity: 0.8;
+}
+
+/* ② ドラッグ反転ギミック */
+.secret-drag-box {
+    margin: 40px auto;
+    text-align: center;
+    border: 1px dashed #222;
+    padding: 15px;
+    background: #050505;
+}
+
+.drag-hint {
+    color: #444;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+/* 通常時は背景色と同じ黒にして見えなくする */
+.secret-text {
+    color: #050505;
+    font-size: 13px;
+    line-height: 1.8;
+    user-select: all; /* ドラッグしやすくする */
+    transition: color 0.1s;
+}
+
+/* ドラッグして選択された時だけ、血のような赤色で浮き上がらせる */
+.secret-text::selection {
+    background: #ff0055;
+    color: #ffffff;
+}
+/* Firefox用 */
+.secret-text::-moz-selection {
+    background: #ff0055;
+    color: #ffffff;
+}
+
+/* ③ 心拍のように点滅する警告メッセージ */
+.pulsing-warning {
+    text-align: center;
+    font-size: 12px;
+    color: #ff0033;
+    margin: 50px 0;
+    letter-spacing: 0.1em;
+    animation: heartBeat 3s infinite ease-in-out;
+    text-shadow: 0 0 5px #ff0033;
+}
+
+@keyframes heartBeat {
+    0% { opacity: 0.1; }
+    30% { opacity: 0.1; }
+    32% { opacity: 0.8; }
+    35% { opacity: 0.4; }
+    38% { opacity: 1; }
+    45% { opacity: 0.1; }
+    100% { opacity: 0.1; }
+}
+/* 入り口ページ用のbody設定 */
+.enter-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* スクロールバーを消して不気味に */
+}
+
+.enter-container {
+    text-align: center;
+    max-width: 500px;
+    padding: 30px;
+    background: rgba(10, 5, 10, 0.9);
+    border: 1px double #3a2d3a;
+    box-shadow: 0 0 20px rgba(123, 0, 255, 0.15);
+}
+
+/* タイトルロゴ */
+.enter-logo {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0055;
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+}
+
+/* 警告文エリア */
+.enter-warning {
+    color: #888888;
+    font-size: 11px;
+    line-height: 1.8;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 20px 10px;
+    margin-bottom: 35px;
+}
+
+.warning-title {
+    color: #ff0033;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 10px;
+    letter-spacing: 0.2em;
+}
+
+.spec-info {
+    margin-top: 15px;
+    color: #555;
+    font-size: 10px;
+}
+
+/* ENTER / EXIT ボタン */
+.enter-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.btn-enter, .btn-exit {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+}
+
+/* ENTERは妖しく光る水色 */
+.btn-enter {
+    color: #00ffcc;
+}
+.btn-enter:hover {
+    color: #ff0055;
+    border: 1px solid #ff0055;
+}
+
+/* EXITは現実（Google）に戻るための逃げ道（少し暗め） */
+.btn-exit {
+    color: #555;
+}
+.btn-exit:hover {
+    color: #999;
+    border: 1px solid #444;
+}
+
+.underground-info-section {
+    max-width: 850px; /* ★横幅を大きく拡大（お好みで 900px や 95% に変更可） */
+    width: 90%;       /* スマホや画面サイズに柔軟にフィット */
+    margin: 40px auto;
+    padding: 30px;    /* 内側の余白も少し広げてゆったり見せる */
+    background: rgba(15, 10, 15, 0.85);
+    border: 1px double #3a2d3a;
+    box-shadow: 0 0 15px rgba(123, 0, 255, 0.2); /* 枠全体をぼんやり紫に発光 */
+    text-align: left;
+}
+
+/* タイトルも少し大きめにして迫力を出す */
+.ug-info-title {
+    font-family: "Georgia", serif;
+    font-size: 28px; /* 大きく */
+    font-weight: bold;
+    color: #ff0055;
+    text-shadow: 0 0 10px #ff0055;
+    margin-bottom: 30px;
+    letter-spacing: 0.15em;
+    text-align: center;
+}
+
+/* 各行の高さと文字サイズも調整 */
+.ug-info-row {
+    display: flex;
+    align-items: center;
+    padding: 16px 10px;
+    border-bottom: 1px solid #251a25;
+    transition: all 0.2s ease;
+}
+
+/* 項目名（住所、電話など）の幅を広げる */
+.ug-info-label {
+    width: 140px;
+    font-size: 15px;
+    color: #00ffcc;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+/* 内容の文字サイズ */
+.ug-info-value {
+    font-size: 15px;
+    color: #cccccc;
+    letter-spacing: 0.05em;
+}
+
+body {
+    background-image: url("../images/bg.jpg");
+
+    background-repeat: repeat;
+
+    background-size: 250px auto;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.hidden-link {
+    color: inherit;       
+    text-decoration: none; 
+    cursor: pointer;       
+}
+
+.hidden-link {
+    color: inherit;         
+    text-decoration: none;  
+    cursor: pointer;        
+}

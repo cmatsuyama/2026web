@@ -1,0 +1,794 @@
+/* ===========================
+   My Favorite Artists
+   Style Sheet
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:#fff;
+
+    background:
+    radial-gradient(circle at top left,#5b21b6 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#0891b2 0%,transparent 35%),
+    linear-gradient(180deg,#09090f 0%,#15152a 45%,#0b1023 100%);
+
+    overflow-x:hidden;
+
+    animation:fadeIn 1.2s ease;
+}
+
+/* ===================
+   アニメーション
+=================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:
+0 0 5px #7dd3fc,
+0 0 15px #7dd3fc;
+
+}
+
+to{
+
+text-shadow:
+0 0 10px #7dd3fc,
+0 0 30px #7c3aed,
+0 0 60px #7c3aed;
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================
+   リンク
+=================== */
+
+a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+a:hover{
+
+color:#7dd3fc;
+
+}
+
+/* ===================
+   ナビゲーション
+=================== */
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 8%;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(12px);
+
+position:fixed;
+
+width:100%;
+
+z-index:999;
+
+}
+
+nav h1{
+
+font-size:1.8rem;
+
+font-family:Poppins,sans-serif;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav li{
+
+font-weight:bold;
+
+}
+
+/* ===================
+   Hero
+=================== */
+
+.hero{
+
+height:100vh;
+
+background:url("../images/hero.jpg") center/cover;
+
+position:relative;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+}
+
+.hero-text{
+
+position:relative;
+
+margin:auto;
+
+text-align:center;
+
+padding:50px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+}
+
+.hero-text h2{
+
+font-size:4.5rem;
+
+font-family:Poppins,sans-serif;
+
+color:#7dd3fc;
+
+animation:glow 2s infinite alternate;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:1.2rem;
+
+line-height:2;
+
+}
+
+/* ===================
+   Card
+=================== */
+
+.card{
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+max-width:1100px;
+
+margin:70px auto;
+
+padding:35px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:25px;
+
+box-shadow:0 0 30px rgba(124,58,237,.15);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+0 20px 40px rgba(124,58,237,.45);
+
+}
+
+.card img{
+
+width:360px;
+
+height:240px;
+
+object-fit:cover;
+
+object-position:center 20%;
+
+border-radius:20px;
+
+transition:.5s;
+
+box-shadow:0 0 25px rgba(124,58,237,.3);
+
+}
+
+.card img:hover{
+
+transform:scale(1.06);
+
+box-shadow:
+0 0 40px rgba(124,58,237,.8);
+
+}
+
+.card h2{
+
+display:inline-block;
+
+position:relative;
+
+margin-bottom:18px;
+
+color:#b794ff;
+
+font-size:2rem;
+
+}
+
+.card h2::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:70%;
+
+height:3px;
+
+background:#7c3aed;
+
+border-radius:30px;
+
+}
+
+.card p{
+
+line-height:2;
+
+margin-bottom:20px;
+
+}
+
+.card ul{
+
+padding-left:22px;
+
+line-height:2;
+
+}
+/* ===================
+   詳しく見るボタン
+=================== */
+
+.detail-btn{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:14px 35px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+background:linear-gradient(90deg,#7c3aed,#06b6d4);
+
+color:white;
+
+transition:.35s;
+
+}
+
+.detail-btn:hover{
+
+background:linear-gradient(90deg,#9f67ff,#00d9ff);
+
+transform:translateY(-5px);
+
+box-shadow:
+0 0 15px #7c3aed,
+0 0 35px #7c3aed;
+
+}
+
+/* ===================
+   詳細ページ
+=================== */
+
+.small-hero{
+
+height:60vh;
+
+}
+
+.detail{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 20px;
+
+}
+
+.artist-profile{
+
+display:flex;
+
+align-items:center;
+
+gap:50px;
+
+margin-bottom:90px;
+
+}
+
+.artist-profile img{
+
+width:430px;
+
+border-radius:20px;
+
+transition:.5s;
+
+box-shadow:0 0 25px rgba(124,58,237,.35);
+
+}
+
+.artist-profile img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 40px rgba(124,58,237,.7);
+
+}
+
+/* ===================
+   アルバムカード
+=================== */
+
+.album-card{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.album{
+
+width:220px;
+
+padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.album:hover{
+
+transform:
+translateY(-10px)
+scale(1.05);
+
+box-shadow:
+0 15px 35px rgba(124,58,237,.5);
+
+}
+
+.album img{
+
+width:100%;
+
+border-radius:15px;
+
+margin-bottom:15px;
+
+}
+
+.album h3{
+
+margin-bottom:8px;
+
+color:#7dd3fc;
+
+}
+
+/* ===================
+   Spotify風
+=================== */
+
+.spotify{
+
+margin-top:35px;
+
+}
+
+.song{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:16px 25px;
+
+margin:15px 0;
+
+background:#1DB954;
+
+border-radius:12px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.song:hover{
+
+transform:translateX(10px);
+
+background:#18a94d;
+
+}
+
+/* ===================
+   好きな理由
+=================== */
+
+.favorite{
+
+margin-top:25px;
+
+padding:30px;
+
+background:linear-gradient(135deg,#7c3aed,#4338ca);
+
+border-radius:25px;
+
+line-height:2;
+
+font-size:1.05rem;
+
+box-shadow:0 0 30px rgba(124,58,237,.35);
+
+position:relative;
+
+}
+
+.favorite::before{
+    content:"💜";
+    font-size:28px;
+    position:absolute;
+    top:-25px;   /* -15px → -25px */
+    left:20px;
+    background:#15152a;
+    padding:5px 10px;
+    border-radius:50%;
+}
+
+/* ===================
+   HOMEボタン
+=================== */
+
+.back{
+
+text-align:center;
+
+margin-top:70px;
+
+}
+
+/* ===================
+   Footer
+=================== */
+
+footer{
+
+margin-top:80px;
+
+padding:30px;
+
+text-align:center;
+
+background:#000;
+
+letter-spacing:2px;
+
+}
+
+/* ===================
+   スクロールバー
+=================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#7c3aed;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#a855f7;
+
+}
+
+/* ===================
+   背景の光
+=================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:350px;
+
+height:350px;
+
+background:#7c3aed;
+
+filter:blur(180px);
+
+top:-100px;
+
+left:-120px;
+
+opacity:.18;
+
+pointer-events:none;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:300px;
+
+height:300px;
+
+background:#06b6d4;
+
+filter:blur(170px);
+
+bottom:-100px;
+
+right:-120px;
+
+opacity:.15;
+
+pointer-events:none;
+
+}
+
+/* ===================
+   スマホ対応
+=================== */
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:20px;
+
+}
+
+nav ul{
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero-text{
+
+padding:30px;
+
+}
+
+.hero-text h2{
+
+font-size:2.7rem;
+
+}
+
+.card{
+
+flex-direction:column;
+
+text-align:center;
+
+margin:40px 15px;
+
+}
+
+.card img{
+
+width:100%;
+
+height:auto;
+
+}
+
+.artist-profile{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.artist-profile img{
+
+width:100%;
+
+}
+
+.album{
+
+width:90%;
+
+}
+
+.song{
+
+font-size:.95rem;
+
+padding:14px;
+
+}
+
+}
+.top-btn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#7c3aed;
+    color:#fff;
+    text-align:center;
+    line-height:55px;
+    font-size:22px;
+    box-shadow:0 0 20px rgba(124,58,237,.5);
+    transition:.3s;
+    z-index:999;
+}
+
+.top-btn:hover{
+    transform:translateY(-5px);
+    background:#9f67ff;
+}

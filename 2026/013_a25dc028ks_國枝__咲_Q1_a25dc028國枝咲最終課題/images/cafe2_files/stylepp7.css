@@ -1,0 +1,475 @@
+
+.ppic_boxouter{
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0px 0px 8px rgba(240,224,199,0.8);
+	color:#522800;
+	background-color:#F8F0D7;
+	text-align:left;
+	overflow: hidden;
+	position:relative;
+	font-size:13px;
+	zoom:1;
+}
+#pRects {
+	cursor: move;
+	display:none;
+	border:1px #000000 dashed;
+	width:100px;
+	height:100px;
+	position:absolute;
+}
+#pRectinner {
+	border:1px #ffffff dashed;
+	width:100%;
+	height:100%;
+}
+#pAddRect{
+	display:none;
+	border:1px #000000 dashed;
+	position:absolute;
+}
+#daddimg{
+	display:block;
+	border:1px #ffffff dashed;
+	opacity: 0.8;
+	
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	
+    -webkit-user-drag:none;
+    -khtml-user-drag:none;
+    
+	pointer-events: none;
+}
+
+.ppic_menu{list-style-type: none;margin-top:8px;margin-right:12px;}
+.ppic_menubase{float:left;width:52px;text-align:center;font-size:0.70em;}
+.ppic_menubaseinner{display:block;margin:0px 1px;color:#8c5d31;text-decoration:none;overflow:hidden;text-align:center;}
+.ppic_icons{
+	overflow:hidden;
+	background-image:url("https://www.peko-step.com/image/ppicicons2.png");
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:44px;
+	height:44px;
+	background-size: 440px 176px;
+	display:inline-block;
+	/display:inline;	/*-IE7-*/
+	/zoom: 1;			/*-IE7-*/
+}
+.ppic_iconsharf{
+	overflow:hidden;
+	background-image:url("https://www.peko-step.com/image/ppicicons2.png");
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:28px;
+	height:28px;
+	background-size: 440px 176px;
+	display:inline-block;
+	/display:inline;	/*-IE7-*/
+	/zoom: 1;			/*-IE7-*/
+}
+.ppic_icon1{background-position: -1px -1px;}
+.ppic_icon2{background-position: -45px -1px;}
+.ppic_icon3{background-position: -89px -1px;}
+.ppic_icon4{background-position: -133px -1px;}
+.ppic_icon5{background-position: -177px -1px;}
+.ppic_icon6{background-position: -221px -1px;}
+.ppic_icon7{background-position: -265px -1px;}
+.ppic_icon8{background-position: -309px -1px;}
+.ppic_icon9{background-position: -353px -1px;}
+
+
+.ppic_miniicons{
+	overflow:hidden;
+	background-image:url("https://www.peko-step.com/image/ppicicons2.png");
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:24px;
+	height:24px;
+	background-size: 440px 176px;
+	display:inline-block;
+	margin-right:12px;
+	/display:inline;	/*-IE7-*/
+	/zoom: 1;			/*-IE7-*/
+}
+.ppic_miniicon1{background-position: -10px -98px;}
+.ppic_miniicon2{background-position: -54px -98px;}
+.ppic_miniicon3{background-position: -98px -98px;}
+.ppic_miniicon4{background-position: -142px -98px;}
+.ppic_miniicon5{background-position: -186px -98px;}
+.ppic_miniicon6{background-position: -230px -98px;}
+.ppic_miniicon7{background-position: -274px -98px;}
+.ppic_miniicon8{background-position: -318px -98px;}
+.ppic_miniicon9{background-position: -362px -98px;}
+.ppic_miniicon10{background-position: -406px -98px;}
+
+
+.ppic_headmenu{list-style-type: none;}
+.ppic_headmenu li{cursor: pointer;position: relative;float:left; width:62px;text-align:center;font-size:12px;}
+.ppic_headmenu li a{display: block;}
+.ppic_headmenu li ul{color:#522800;text-shadow:none;list-style-type: none;position: absolute;z-index: 100;top: 100%;    background-color:#F8F0D7;box-shadow: 0px 0px 10px rgba(82,40,0,0.8);}
+.ppic_headmenu li ul li{width: 100%;overflow: hidden;transition: 0.2s;padding:5px;text-align:left;}
+
+
+
+
+#pRectPtLT { cursor: nw-resize;position:absolute;top:-7px;left:-7px;padding:4px; }
+#pRectPtLB { cursor: sw-resize;position:absolute;bottom:-7px;left:-7px;padding:4px; }
+#pRectPtRT { cursor: ne-resize;position:absolute;top:-7px;right:-7px;padding:4px; }
+#pRectPtRB { cursor: se-resize;position:absolute;bottom:-7px;right:-7px;padding:4px; }
+.pRectPtouter { border:1px #000000 solid; }
+.pRectPtinner { background-color:#ffffff;width:6px;height:6px; }
+
+#ppic_modalback{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+	z-index:500;
+	display: none;
+	transition: 0.2s;
+}
+#ppic_modalwin{
+	width:300px;
+	background-color:#F8F0D7;
+	margin:0 auto;
+	position: relative;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0px 0px 10px rgba(82,40,0,0.8);
+	overflow: hidden;
+}
+
+#dprvimg{
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	
+    -webkit-user-drag:none;
+    -khtml-user-drag:none;
+}
+
+.ppic_edittable {
+	border-collapse: collapse; 
+	width:100%; 
+	font-size:12px;
+}
+.ppic_edittablehead {
+	border: 1px solid #b9b9b9;
+	text-align:center;
+	padding:5px;
+	background-color:#ffDD99;
+}
+.ppic_edittablecell {
+	border: 1px solid #b9b9b9;
+	padding:5px;
+}
+.ppic_edittablecellmini {
+	border: 1px solid #b9b9b9;
+	padding:1px 5px;
+}
+.ppic_edittablecell_nbl {
+	border: 1px solid #b9b9b9;
+	border-left-width:0px;
+	padding:1px 5px;
+}
+.ppic_edittablecell_nbr {
+	border: 1px solid #b9b9b9;
+	border-right-width:0px;
+	padding:1px 5px;
+}
+
+.ppic_toolicons{
+	cursor: pointer;
+	float:left;
+	overflow:hidden;
+	background-image:url("https://www.peko-step.com/image/ppictools2.png");
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:32px;
+	height:32px;
+	margin:0px;
+	padding:0px;
+	background-size: 1500px 72px;
+	/display:inline;	/*-IE7-*/
+	/zoom: 1;			/*-IE7-*/
+}
+.ppic_toolicon00 {background-position: -2px -2px;}
+.ppic_toolicon10 {background-position: -38px -2px;}
+.ppic_toolicon20 {background-position: -74px -2px;}
+.ppic_toolicon30 {background-position: -110px -2px;}
+.ppic_toolicon40 {background-position: -146px -2px;}
+.ppic_toolicon50 {background-position: -182px -2px;}
+.ppic_toolicon60 {background-position: -218px -2px;}
+.ppic_toolicon70 {background-position: -254px -2px;}
+.ppic_toolicon80 {background-position: -290px -2px;}
+.ppic_toolicon90 {background-position: -326px -2px;}
+.ppic_toolicon100{background-position: -362px -2px;}
+.ppic_toolicon110{background-position: -398px -2px;}
+.ppic_toolicon120{background-position: -434px -2px;}
+.ppic_toolicon130{background-position: -470px -2px;}
+.ppic_toolicon140{background-position: -506px -2px;}
+.ppic_toolicon150{background-position: -542px -2px;}
+.ppic_toolicon160{background-position: -578px -2px;}
+.ppic_toolicon170{background-position: -614px -2px;}
+.ppic_toolicon180{background-position: -650px -2px;}
+.ppic_toolicon190{background-position: -686px -2px;}
+.ppic_toolicon200{background-position: -722px -2px;}
+.ppic_toolicon210{background-position: -758px -2px;}
+.ppic_toolicon220{background-position: -794px -2px;}
+.ppic_toolicon230{background-position: -830px -2px;}
+.ppic_toolicon240{background-position: -866px -2px;}
+.ppic_toolicon250{background-position: -902px -2px;}
+
+
+
+.ppic_toolicon01 {background-position: -2px -38px;}
+.ppic_toolicon11 {background-position: -38px -38px;}
+.ppic_toolicon21 {background-position: -74px -38px;}
+.ppic_toolicon31 {background-position: -110px -38px;}
+.ppic_toolicon41 {background-position: -146px -38px;}
+.ppic_toolicon51 {background-position: -182px -38px;}
+.ppic_toolicon61 {background-position: -218px -38px;}
+.ppic_toolicon71 {background-position: -254px -38px;}
+.ppic_toolicon81 {background-position: -290px -38px;}
+.ppic_toolicon91 {background-position: -326px -38px;}
+.ppic_toolicon101{background-position: -362px -38px;}
+.ppic_toolicon111{background-position: -398px -38px;}
+.ppic_toolicon121{background-position: -434px -38px;}
+.ppic_toolicon131{background-position: -470px -38px;}
+.ppic_toolicon141{background-position: -506px -38px;}
+.ppic_toolicon151{background-position: -542px -38px;}
+.ppic_toolicon161{background-position: -578px -38px;}
+.ppic_toolicon171{background-position: -614px -38px;}
+.ppic_toolicon181{background-position: -650px -38px;}
+.ppic_toolicon191{background-position: -686px -38px;}
+.ppic_toolicon201{background-position: -722px -38px;}
+.ppic_toolicon211{background-position: -758px -38px;}
+.ppic_toolicon221{background-position: -794px -38px;}
+.ppic_toolicon231{background-position: -830px -38px;}
+.ppic_toolicon241{background-position: -866px -38px;}
+.ppic_toolicon251{background-position: -902px -38px;}
+
+
+
+
+
+.ppic_sblnicons{
+	overflow:hidden;
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:32px;
+	height:32px;
+	margin:0px;
+	padding:0px;
+	width:45px;
+	height:45px;
+	background-image:url('https://www.peko-step.com/image/ppicsbm.png');
+	/display:inline;	/*-IE7-*/
+	/zoom: 1;			/*-IE7-*/
+}
+.ppic_sblnicon00{background-position: -0px -0px;}
+.ppic_sblnicon01{background-position: -45px -0px;}
+.ppic_sblnicon02{background-position: -90px -0px;}
+.ppic_sblnicon03{background-position: -135px -0px;}
+.ppic_sblnicon10{background-position: -0px -45px;}
+.ppic_sblnicon11{background-position: -45px -45px;}
+.ppic_sblnicon12{background-position: -90px -45px;}
+.ppic_sblnicon13{background-position: -135px -45px;}
+.ppic_sblnicon20{background-position: -0px -90px;}
+.ppic_sblnicon21{background-position: -45px -90px;}
+.ppic_sblnicon22{background-position: -90px -90px;}
+.ppic_sblnicon23{background-position: -135px -90px;}
+.ppic_sblnicon30{background-position: -0px -135px;}
+.ppic_sblnicon31{background-position: -45px -135px;}
+.ppic_sblnicon32{background-position: -90px -135px;}
+.ppic_sblnicon33{background-position: -135px -135px;}
+
+#tomenubtn {
+	position:fixed;
+	bottom:15px;
+	left:15px;
+	overflow:hidden;
+	background-image:url("https://www.peko-step.com/image/sitetitle5.png");
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:46px;
+	height:46px;
+	background-size: 260px 286px;
+	display:inline-block;
+	/display:inline;	/*-IE7-*/
+	/zoom: 1;			/*-IE7-*/
+	background-position: -56px -237px;
+}
+#ppic_centtoolbox {
+	display:block;
+}
+.ppic_menuwins { 
+	color:#522800;
+	text-shadow:none;
+	list-style-type: none;
+	position: absolute;
+	z-index: 113;
+	bottom:100%;
+	left:10px;
+	background-color:#F8F0D7;
+	box-shadow: 0px 0px 20px rgba(82,40,0,0.8);
+	width:200px;
+	font-size:12px;
+	margin-bottom:10px;
+}
+.ppic_prowins { 
+	color:#522800;
+	text-shadow:none;
+	position: absolute;
+	z-index: 111;
+	bottom:100%;
+	left:0px;
+	right:18px;
+	background-color:#F8F0D7;
+	box-shadow: 0px 0px 20px rgba(82,40,0,0.8);
+	margin-bottom:10px;
+	min-width:300px;
+	max-height:500px;
+	text-align:left;
+	padding:2px;
+}
+
+.ppic_menuwins li{ overflow: hidden;transition: 0.2s;padding:5px;text-align:left; }
+.ppic_menuwins li.mn{cursor: pointer;padding-left:15px;}
+.ppic_menuwins li.mn:hover{color:#6020df;text-shadow:1px 0 1px #6020df;transition: 0.2s;}
+.ppic_menuwins li.mn a {text-decoration:none;color:#522800;}
+.ppic_menubd {border-top:1px #8C5D31 solid;border-bottom:2px #ffffff solid;}
+.ppic_menuwins li.hd{ background-color:rgba(82,40,0,0.8);font-size:14px;color:#EAD493;margin-bottom:8px;padding-left:10px; }
+.hdr{ overflow: hidden;transition: 0.2s;padding:5px;text-align:left;background-color:#D4796A;font-size:12px;color:#F1F8F3;padding-left:10px; }
+.hdg{ overflow: hidden;transition: 0.2s;padding:5px;text-align:left;background-color:#4F9D66;font-size:12px;color:#F1F8F3;padding-left:10px; }
+
+.ppic_edittable .phed {
+	border: 1px solid #b9b9b9;
+	text-align:center;
+	padding:5px;
+	background-color:#ffDD99;
+}
+.ppic_edittable .pcel {
+	border: 1px solid #b9b9b9;
+	padding:5px;
+}
+.ppic_edittable .pcel_m {
+	border: 1px solid #b9b9b9;
+	padding:1px 5px;
+}
+.ppic_edittable .pcel_c {
+	border: 1px solid #b9b9b9;
+	padding:5px;
+	text-align:center;
+}
+.pcbw5 input {width:50px;}
+.pcbw6 input {width:60px;}
+.pcbw10 input {width:60px;}
+.pcbw12 input {width:60px;}
+.pclnum input:first-child {width:120px;vertical-align:middle;padding:0px;}
+.pclnum input:last-child {width:50px;vertical-align:middle;margin-left:10px;}
+.pccolb input:first-child {width:100px;}
+.pccolb input:last-child {padding:0px 4px;}
+.pcend input {padding:4px 16px;}
+.ptxtab {display: grid;grid-template-columns: auto auto auto auto auto;font-size:12px;padding-top:4px;}
+.pin {border: 1px solid #b9b9b9; border-bottom-width:0px; text-align:center; padding:4px;text-decoration:underline;color:#0000ff;cursor: pointer;}
+.pno {border: 1px solid #b9b9b9; text-align:center;margin-top:4px; padding:4px;background-color:#E0E0C0;text-decoration:underline;color:#0000ff;cursor: pointer;}
+
+.wd3 {width:30px;}
+.wd4 {width:40px;}
+.wd5 {width:50px;}
+.wd6 {width:60px;}
+.wd7 {width:70px;}
+.wd8 {width:80px;}
+.wd9 {width:90px;}
+.wd10{width:100px;}
+.wd11{width:110px;}
+.wd12{width:120px;}
+
+
+
+.ppic_bxicons{
+	overflow:hidden;
+	background-image:url("https://www.peko-step.com/image/ppictools2.png");
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	width:32px;
+	height:32px;
+	display:inline-block;
+	margin:6px;
+}
+.ppic_pl{
+	position:relative;
+	background-image: url(https://www.peko-step.com/image/colorselsm.png);
+	width:285px;
+	height:75px;
+	border:1px #444444 solid;
+	overflow:hidden;
+}
+.ppic_plcur{
+	position:absolute;border:1px #444444 solid;
+	top:59px;
+	left:269px;
+}
+.ppic_plcur .pcr_out{border:1px #ffffff solid;}
+.ppic_plcur .pcr_in{width:12px;height:12px;}
+.ppic_colbo{
+	border: 1px solid #b9b9b9;
+	position:relative;
+	width:60px;
+	padding:2px;
+	height:100%;
+}
+.ppic_colbi{
+	width:100%;
+	height:100%;
+	background-color:#000000;
+}
+.ppic_ld_b {position: absolute; top:0px;left:0px;width:100%;height:100%;background-color:rgba(0,0,0,0.5);}
+.ppic_ld_c {width:240px;min-height:150px;font-size:12px;margin:80px auto 0px;text-align:center;background-color:#F0E0C7;padding:50px 0px;box-shadow: 0px 0px 10px rgba(82,40,0,0.8);}
+
+/* ------------------------------------------------------ */
+@media screen and (min-width:505px){
+	.ppic_headmenu li:hover{color:#6020df;text-shadow:1px 0 1px #6020df;transition: 0.2s;}
+	.ppic_headmenu li a {text-decoration:none;color:#522800;}
+	.ppic_icon1:hover{background-position: -2px -46px;}
+	.ppic_icon2:hover{background-position: -46px -46px;}
+	.ppic_icon3:hover{background-position: -90px -46px;}
+	.ppic_icon4:hover{background-position: -134px -46px;}
+	.ppic_icon5:hover{background-position: -178px -46px;}
+	.ppic_icon6:hover{background-position: -222px -46px;}
+	.ppic_icon7:hover{background-position: -266px -46px;}
+	.ppic_icon8:hover{background-position: -310px -46px;}
+	.ppic_icon9:hover{background-position: -354px -46px;}
+	.ppic_prowins { 
+		left:10px;
+		right:auto;
+		width:75%;
+	}
+}
+/* ------------------------------------------------------ */
+@media screen and (min-width:768px){
+	#tomenubtn {
+		width:66px;
+		height:66px;
+		background-size: 372px 408px;
+		background-position: -78px -337px;
+	}
+	#ppic_centtoolbox {
+		display:none;
+	}
+	
+}
+
+
+

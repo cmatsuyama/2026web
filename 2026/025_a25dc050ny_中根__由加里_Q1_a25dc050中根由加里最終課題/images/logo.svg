@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="100%">
+  <defs>
+    <style>
+      /* フォント・カラー設定 */
+      .brand-title {
+        font-family: 'Philosopher', 'Zen Old Mincho', serif;
+        font-size: 82px;
+        fill: #542d2d;
+        letter-spacing: 4px;
+      }
+      .brand-sub {
+        font-family: 'Zen Old Mincho', serif;
+        font-size: 26px;
+        fill: #7a4848;
+        letter-spacing: 6px;
+      }
+      .circle-bg { fill: none; stroke: #542d2d; stroke-width: 6; }
+      .circle-inner { fill: none; stroke: #7a4848; stroke-dasharray: 6 6; stroke-width: 3; }
+      .flower-petal-main { fill: #542d2d; }
+      .flower-petal-accent { fill: #7a4848; }
+      .flower-stem { fill: none; stroke: #542d2d; stroke-width: 8; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- ==================== 左側：エンブレムマーク ==================== -->
+  <g transform="translate(20, 0)">
+    <!-- 外枠の二重円 -->
+    <circle cx="150" cy="150" r="130" class="circle-bg" />
+    <circle cx="150" cy="150" r="118" class="circle-inner" />
+    
+    <!-- 中央のモチーフ（可憐なお花） -->
+    <g transform="translate(150, 150)">
+      <!-- 茎 -->
+      <path d="M 0 20 C -5 50 -15 70 -20 80" class="flower-stem" />
+      
+      <!-- 左右の葉っぱ -->
+      <path d="M -15 65 C -45 55 -55 30 -35 20 C -25 35 -20 50 -15 65 Z" class="flower-petal-main" opacity="0.85" />
+      <path d="M -5 45 C 25 35 35 10 15 0 C 5 15 0 30 -5 45 Z" class="flower-petal-main" opacity="0.85" />
+
+      <!-- 花びら（メインの蕾・大） -->
+      <!-- 外側の大きな花びら（左） -->
+      <path d="M 0 20 C -45 5 -55 -40 -30 -65 C -10 -40 -5 -15 0 20 Z" class="flower-petal-main" />
+      <!-- 外側の大きな花びら（右） -->
+      <path d="M 0 20 C 45 5 55 -40 30 -65 C 10 -40 5 -15 0 20 Z" class="flower-petal-main" />
+      <!-- 中央のアクセント花びら -->
+      <path d="M 0 20 C -25 -10 -25 -60 0 -75 C 25 -60 25 -10 0 20 Z" class="flower-petal-accent" />
+      <!-- 一番奥の小さな花びら -->
+      <path d="M -15 -50 C -10 -70 0 -82 0 -82 C 0 -82 10 -70 15 -50 Z" class="flower-petal-main" opacity="0.7" />
+    </g>
+
+    <!-- 円の左右の装飾ドット -->
+    <circle class="flower-petal-accent" cx="45" cy="150" r="5" />
+    <circle class="flower-petal-accent" cx="255" cy="150" r="5" />
+  </g>
+
+  <!-- ==================== 右側：テキストロゴ ==================== -->
+  <g transform="translate(340, 140)">
+    <!-- メイン店名 -->
+    <text x="0" y="20" class="brand-title">Hana no Oto</text>
+    <!-- サブテキスト -->
+    <text x="5" y="70" class="brand-sub">FLOWER &amp; PLANTS</text>
+  </g>
+</svg>

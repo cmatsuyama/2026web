@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麻辣湯の歴史 - 麻辣湯</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* タイムラインのコンテナ */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem 0;
+        }
+
+        /* 中央の縦線 */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: #D32F2F;
+            transform: translateX(-50%);
+        }
+
+        /* タイムラインの各セクション */
+        .history-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            margin-bottom: 4rem;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        /* カード上の赤いポッチ（ポイント） */
+        .history-card::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background: #D32F2F;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 2px #D32F2F;
+            z-index: 2;
+        }
+
+        .history-img {
+            flex: 1 1 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            max-height: 220px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .history-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .history-text {
+            flex: 1 1 350px;
+        }
+
+        .history-era {
+            display: inline-block;
+            color: #D32F2F;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #D32F2F;
+            padding-bottom: 2px;
+        }
+
+        /* スマホ用レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            .history-card::after {
+                left: 20px;
+            }
+            .history-card {
+                padding-left: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ▼ ヘッダー・サブカバー ▼ -->
+<div class="sub-cover" style="background: url('images/bg-marble.jpg') no-repeat center center / cover;">
+    <header class="page-header wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+        <h1 class="align-center" style="margin: 0; flex-shrink: 0;">
+            <a href="index.html" style="display: block;">
+                <img class="logo" src="images/logo.png" alt="麻辣湯 ホーム" style="height: 100px; width: auto; display: block;">
+            </a>
+        </h1>
+
+        <!-- ナビゲーションメニュー -->
+        <nav>
+            <ul class="main-nav" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: #fff; text-decoration: none; font-weight: bold;">ホーム</a></li>
+                <li><a href="history.html" style="color: #fff; text-decoration: none; font-weight: bold;">麻辣湯の歴史</a></li>
+                <li><a href="shops.html" style="color: #fff; text-decoration: none; font-weight: bold;">お店紹介</a></li>
+                <li><a href="access.html" style="color: #fff; text-decoration: none; font-weight: bold;">頼み方ガイド</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="page-title font-english" style="margin: 0; text-align: center;"></h2>
+</div>
+
+    <!-- ▼ メインコンテンツ ▼ -->
+    <main class="wrapper">
+        <div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+            <h2 class="heading-large font-english">The Origin of Malatang</h2>
+            <p style="color: #666; font-family: 'Shippori Mincho', serif;">痺れる辛さと旨味。麻辣湯が歩んできたストーリー。</p>
+        </div>
+
+        <div class="timeline">
+            <!-- 時代1：四川のルーツ -->
+            <section class="history-card">
+                <div class="history-img">
+                    <img src="images/history-sichuan.jpg" alt="四川の歴史的な風景">
+                </div>
+                <div class="history-text">
+                    <span class="history-era">ROOTS / 四川省・長江沿い</span>
+                    <h3 class="heading-medium" style="text-align: left; margin-top: 0.3rem; font-family: 'Shippori Mincho', serif;">四川の河畔から生まれた「麻辣」</h3>
+                    <p style="line-height: 1.8; color: #444;">
+                        麻辣湯のルーツは、中国・四川省の長江沿いで働く船引きたちのお腹を満たしていた屋台料理にあります。<br>
+                        湿気が多く寒さの厳しい川辺で体調を整えるため、地元の山椒（花椒）や唐辛子、漢方生薬を入れて煮込んだスープが始まりとされています。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 時代2：こだわりと誕生 -->
+            <section class="history-card" style="flex-direction: row-reverse;">
+                <div class="history-img">
+                    <img src="images/history-spices.jpg" alt="厳選されたスパイスと生薬">
+                </div>
+                <div class="history-text">
+                    <span class="history-era">PRESENT / 現代への進化</span>
+                    <h3 class="heading-medium" style="text-align: left; margin-top: 0.3rem; font-family: 'Shippori Mincho', serif;">「麻辣湯」のこだわりと誕生</h3>
+                    <p style="line-height: 1.8; color: #444;">
+                        本場・四川の力強い味わいを大切にしながらも、現代の健康志向に寄り添う一品をお届けしたい——。<br>
+                        そんな思いから誕生したのが当店の麻辣湯です。油分を極力抑えつつ、生薬の深いコクと華やかな香りを引き出した、毎日でも食べたくなるヘルシーな薬膳スープを実現しました。
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ▼ フッター（縦幅を広げた修正版） ▼ -->
+    <footer class="page-footer" style="background: url('images/bg-marble.jpg') no-repeat center center / cover; padding: 100px 20px; text-align: center; color: #fff;">
+        <div class="copyright" style="background: transparent;">
+            <small style="color: #d4af37; font-size: 1.1rem; font-weight: bold; letter-spacing: 0.05em;">&copy; 2026 麻辣湯 A25DC008 市川友絆</small>
+        </div>
+    </footer>
+</body>
+</html>

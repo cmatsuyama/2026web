@@ -1,0 +1,25 @@
+$(function() {
+	var showFlag = false;
+	var topBtn = $('#pagetopbtn');    
+	var showFlag = false;
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			if (showFlag == false) {
+				showFlag = true;
+				topBtn.css('display', 'inline-block');
+			}
+		} else {
+			if (showFlag) {
+				showFlag = false;
+				topBtn.css('display', 'none');
+			}
+		}
+	});
+	topBtn.click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 500);
+		return false;
+	});
+	$("img.lazy").lazyload();
+});

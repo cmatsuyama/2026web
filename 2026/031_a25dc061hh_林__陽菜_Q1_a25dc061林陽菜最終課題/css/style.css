@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: rgb(91, 54, 55);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.align-center{
+    text-align: center;
+}
+.font-english{
+    font-family:"Philosopher", sans-serif;
+    font-weight: normal;
+}
+.page-title, 
+.heading-large,
+.heading-medium{
+    font-size: 3rem;
+    text-align: center;
+}
+.page-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    color: #4a1a22;
+    text-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+.heading-large{
+    margin-bottom: 1rem;
+}
+
+.page-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+.logo{
+    width: 100px;
+}
+.main-nav{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.main-nav a{
+    color: #432;
+}
+.main-nav a:hover{
+    color:rgb(248, 50, 50);
+}
+.cover{
+    position: relative;
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
+.sub-cover{
+    position: relative;
+    background-size: cover;
+    background-position: center bottom;
+    height: 528px;
+    margin-bottom: 4rem;
+}
+.cover-home{
+    background-image: url(../images1/空イラスト.png);
+}
+.about{
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 0;
+}
+.about p{
+    margin-bottom: 3rem;
+}
+.cover-news{
+    background-image: url(../images1/海イラスト.png);
+}
+.post{
+    margin-bottom: 3rem;
+}
+.post-title{
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+}
+.post-info{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.post-cat{
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+}
+.post-cat a {
+    color: #432;
+    background-color: #faf7f0;
+    border-radius: 8px;
+    font-size: .875rem;
+    padding: .5rem .75rem;
+}
+.post-cat a:hover{
+    background-color: #c9c2bc;
+}
+.post-date{
+    font-size: .875rem;
+}
+.post-thumbnail{
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+.post p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+.side-menu{
+    list-style: none;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.side-menu li{
+    border-bottom: 1px solid #c9c2bc;
+}
+.side-menu a{
+    color: #432;
+    display: block;
+    padding: 1rem;
+}
+.side-menu a:hover{
+    color: rgb(248, 71, 71);
+}
+.cover-list{
+    background-image: url(../images1/原っぱイラスト.png);
+}
+.grid{
+    display: grid;
+    gap: 2rem 1.5rem;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+}
+.item img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.item p{
+    font-size: .875rem;
+}
+.cover-favorite{
+    background-image: url(../images1/水中イラスト.png)
+}
+.location{
+    margin-bottom: 3.5rem;
+}
+.location-info{
+    margin-bottom: 2rem;
+}
+.location-info .info{
+    padding: 0;
+}
+.email{
+    max-width: 916px;
+    background-color: #faf7f0;
+    border-radius: 48px;
+    padding: 1.5rem 2.5rem 2.5rem;
+    margin: 0 auto 2rem;
+}
+.email p {
+    margin: 1rem 0 2rem;
+}
+.sns-item{
+    margin-bottom: 2rem;
+}
+.sns-item .heading-medium{
+    margin-bottom: .5rem;
+}
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: rgb(231, 59, 59);
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: 0.5s;
+}
+.btn:hover{
+    scale: 1.2;
+    background-color: rgb(169, 44, 44);
+}
+iframe{
+    width: 100%;
+}
+.page-footer{
+    background-image: url(../images1/背景1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 12rem;
+}
+.info{
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+}
+.info th,
+.info td{
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th{
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+.info td{
+    padding: 1rem 0;
+}
+.copyright{
+    background-color: rgb(118, 30, 25);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+@media (min-width: 800px) {
+    .page-title{
+        font-size: 5rem;
+    }
+    .heading-large{
+        font-size: 4rem;
+    }
+    .post-title{
+        font-size: 2rem;
+    }
+    .page-header{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    }
+    .main-nav{
+        font-size: 2rem;
+    }
+    .sub-cover{
+        height: 400px;
+        margin-bottom: 6rem;
+    }
+    .cover-home{
+        background-image: url(../images1/空イラスト.jpg);
+    }
+    .about{
+        margin: 4rem auto 0;
+    }
+    .cover-news{
+        background-image: url(../images1/海イラスト.jpg);
+    }
+    .news-contents{
+        display: flex;
+        justify-content: space-between;
+    }
+    .post{
+        width: 70%;
+    }
+    .sidebar{
+        width: 22%;
+    }
+    .sidebar .heading-medium{
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+    .cover-list{
+        background-image: url(../images1/原っぱイラスト.jpg);
+    }
+    .grid{
+        gap: 3rem 2rem;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .item img{
+        margin-bottom: .5rem;
+    }
+    .item p{
+        font-size: 1rem;
+    }
+    .item-big{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .item-big img{
+        height: 94.5%;
+        width: 100%;
+    }
+    .cover-favorite{
+        background-image: url(../images1/水中イラスト.jpg);
+    }
+    .location{
+        display: flex;
+        gap: 2rem;
+    }
+    .location-info{
+        width: 32%;
+    }
+    .location-info .info th{
+        padding-left: 2rem;
+    }
+    .location-map{
+        width: 64%;
+    }
+    .email{
+        margin-bottom: 4rem;
+    }
+    .sns{
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+    .sns-item{
+        flex: 1;
+    }
+    .page-footer{
+        background-image: url(../images1/背景1.jpg);
+        padding-top: 12rem;
+    }
+    .info th{
+        padding-left: 2.5rem;
+    }
+    .info-section {
+        background-color: #faf7f0;
+        padding: 3rem 0;
+}
+}

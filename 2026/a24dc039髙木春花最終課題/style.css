@@ -1,0 +1,406 @@
+html{
+    font-size:100%;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-logo {
+    display: block;
+}
+.site-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+.font-english{
+    font-family: 'Philosopher',sans-serif;
+    font-weight: normal;
+}
+/*一番上のリンク*/
+.main-nav{
+    display:flex;
+    justify-content:flex-end;
+    gap:2.5rem;
+    font-size:1.5rem;
+    list-style:none;
+    margin-bottom: 0;
+}
+.main-nav a{
+    color:#432
+}
+
+/*写真のところ*/
+.about {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f5f0e8;
+}
+.about-inner {
+    z-index: 2;
+    max-width: 1100px;
+    padding: 0 2rem; 
+}
+.about-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-body h1{
+    position: relative;
+    z-index: 2;
+    padding:2rem 3rem;
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(250, 245, 238, 0.9) 5%,
+        rgba(183, 145, 105, 0.6) 100%
+    );
+}
+.about-body p{
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(250, 245, 238, 0.9) 5%,
+        rgba(183, 145, 105, 0.6) 100%
+    );
+}
+.heading-large{
+    color:#333;
+}
+.about-body .heading-large {
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 16px;
+}
+.about-body .heading-large::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 2px;
+    background-color: #b89b6c;
+}
+.about-body p {
+    line-height: 2;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+/*最新情報*/
+
+.news-section {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+.news-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.news-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+.news-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px dotted #ccc;
+}
+.news-list a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.news-list a:hover {
+    color: #b89b6c;
+}
+.news-btn-wrapper {
+    text-align: right;
+}
+.btn {
+    display: inline-block;
+    font-size: 1.1rem;
+    background-color: #bb8238;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.btn:hover {
+    background-color: #9b6b2d;
+}
+
+
+/*footer部分*/
+.info{
+    width:100%;
+    max-width:544px;
+    margin:auto;
+    padding: 0 1.5rem;
+    border-spacing:0;
+}
+.info th,
+.info td{
+    border-bottom:1px solid #c9c2bc;
+}
+.info th{
+    text-align:left;
+    font-weight: normal;
+    padding:1rem;
+}
+.info td{
+    padding:1rem 0;
+}
+.page-footer{
+    background-image: url(images/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 12rem;
+}
+/*その他*/
+.emphasis{
+    font-size:2rem;
+    text-align:center;
+}
+/*コピーライト*/
+.copyright{
+    background-color: #b89b6c;
+    text-align: center;
+    padding:2rem 0;
+    margin-top:6rem;
+    color:#fff;
+}
+/*contact*/
+sub-cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 400px;
+    margin-bottom: 5rem;
+}
+
+.cover-contact {
+    background-image: url("images/cover-contact.jpg"); /* お持ちの画像パスに調整してください */
+}
+
+.page-title {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.heading-medium {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.align-center {
+    text-align: center;
+}
+iframe {
+    width: 100%;
+}
+.location {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.location-info {
+    width: 34%;
+}
+
+.location-info .info {
+    padding: 0;
+}
+
+.location-map {
+    width: 62%;
+}
+.email {
+    max-width: 916px;
+    background-color: #faf7f0;
+    border-radius: 48px;
+    padding: 2.5rem;
+    margin: 0 auto 5rem;
+}
+
+.email p {
+    margin: 1.5rem 0 2rem;
+    line-height: 1.8;
+}
+/*news*/
+.news-cover{
+    background-image:url(images/aporia-top.jpg);
+    opacity: 0.8;
+    padding:2rem 1rem;
+    background-size: cover;
+    background-position: center;
+}
+.news-cover p,
+.news-cover h1{
+    color:black;
+}
+
+/*newss休業*/
+.rest-cover{
+    background-image: url(images/24607848_m.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    margin-top: 2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.hero-text {
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;   
+    padding: 0 20px;  
+    box-sizing: border-box;
+}
+.hero-text p {
+    font-size: 1rem; 
+    line-height: 2; 
+    margin-bottom: 60px; 
+    padding: 30px 20px;
+}
+.special-menu img{
+    max-width:100%;
+    height:auto;
+    object-fit:cover;
+    margin-bottom:1.5rem;
+}
+/*menu*/
+.wrapper{
+    max-width: 1120px;
+    margin: 0 auto;    
+    padding: 1rem 2rem;
+}
+.content-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.message{
+    margin-top:1.5rem;
+}
+.grid{
+        display: grid;
+        gap:3rem 2rem;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+    }
+.item img {
+    width: 100%;             
+    aspect-ratio: 1 / 1;     
+    object-fit: cover;  
+    margin-bottom: 0.5rem;
+}
+.item p{
+        font-size: 1rem;
+}
+@media (max-width: 768px) {
+    .about {
+        min-height: 500px;
+    }
+    .about-body {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+    .news-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .news-btn-wrapper {
+        text-align: center; 
+    }
+    .location {
+        display: block;
+        margin-bottom: 3.5rem;
+    }
+
+    .location-info {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .location-map {
+        width: 100%;
+    }
+
+    .email {
+        padding: 1.5rem 1.25rem 2rem;
+        border-radius: 24px;
+    }.page-title {
+        font-size: 2.2rem;
+    }
+
+    .about-body .heading-large {
+        font-size: 1.8rem;
+        padding-bottom: 12px;
+    }
+    .about-body h1,
+    .about-body p {
+        padding: 1.5rem 1rem;
+    }
+
+    .page-footer {
+        padding-top: 5rem;
+    }
+
+    .hero-text p {
+        padding: 15px 10px;
+        margin-bottom: 30px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .info th,
+    .info td {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        margin-top: 3rem;
+        padding: 1.5rem 0;
+    }
+    .grid{
+    display: grid;
+    gap:2rem 1.5rem;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+}
+}

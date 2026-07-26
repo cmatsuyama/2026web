@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.align-center {
+    text-align: center;
+}
+.font-english {
+    font-family: "Days One", sans-serif;
+    font-weight: normal;
+}
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 3rem;
+    text-align: center;
+}
+.page-title {
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+.heading-large {
+    margin-bottom: 1rem;
+}
+.page-header {
+    padding-top: .5rem;
+}
+.logo {
+    width: 210px;
+}
+.logoh {
+    width: 480px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.main-nav a {
+    color: #432;
+}
+.main-nav a:hover {
+    color: rgb(201, 150, 87);
+}
+.cover {
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 4rem;
+}
+
+.sub-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    padding-bottom: 3rem;    
+    margin-bottom: 4rem;
+}
+.cover-home {
+    background-image: url(../images/shop01.jpg);
+}
+.about {
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 0;
+}
+.about p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+}
+.cover-news {
+    background-image: url(../images/news01.png);
+}
+.post {
+    margin-bottom: 3rem;
+}
+.post-title {
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+}
+.post-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.post-date {
+    font-size: .875rem;
+}
+.post-thumbnail {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 16px;
+    margin: 0 auto 1.5rem;
+}
+.post p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #432;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5s;
+}
+.btn:hover {
+    background-color: rgb(201, 150, 87);
+}
+iframe {
+    width: 100%;
+}
+.page-footer {
+    background-image: url(../images/footer-s.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 12rem;
+}
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0; 
+}
+.info th,
+.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem 0;
+}
+.copyright {
+    background-color: #432;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+.cover-gallery {
+    background-image: url(../images/gallery01.png);
+}
+.grid {
+    display: grid;
+    gap: 2rem 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img{
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+
+.item p{
+    margin-top: 12px;
+    text-align: center;
+    font-size: 1rem;
+}.cover-contact {
+    background-image: url(../images/contact01.png);
+}
+.location {
+    margin-bottom: 3.5rem;
+}
+.location-map {
+    width: 100%;
+}
+.email {
+    max-width: 916px;
+    background-color: #faf7f0;
+    border-radius: 48px;
+    padding: 1.5rem 2.5rem 2.5rem;
+    margin: 0 auto 2rem;
+}
+.email p {
+    margin: 1rem 0 2rem;
+}
+.sns-item {
+    margin-bottom: 2rem;
+}
+.sns-item .heading-medium {
+    margin-bottom: .5rem;
+}
+.sns-youtube {
+    aspect-ratio: 16/9;
+}
+.sns-youtube iframe {
+    height: 100%;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 4rem 0;
+}
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    color: #432;
+    background: #f8f3ec;
+    border: 1px solid #d6c4b2;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+.pagination a:hover {
+    background: rgb(201, 150, 87);
+    color: white;
+}
+.pagination .current {
+    background: #432;
+    color: white;
+}
+
+@media (min-width: 800px) {
+    .page-title {
+        font-size: 5rem;
+    }
+    .heading-large {
+        font-size: 4rem;
+    }
+    .post-title {
+        font-size: 2rem;
+    }
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    }
+    .main-nav {
+        font-size: 2rem;
+    }
+    .cover {
+        min-height: 100vh;
+    }
+    .sub-cover {
+        height: 400px;
+        margin-bottom: 6rem;
+    }
+    .cover-home {
+        background-image: url(../images/shop.png);
+    }
+    .about {
+        margin: 4rem auto;
+    }
+    .cover-news {
+        background-image: url(../images/shop01.png);
+    }
+    .post {
+        width: 100%;
+    }
+    .cover-gallery {
+        background-image: url(../images/gallery.png);
+    }
+    .grid {
+        gap: 3rem 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item img {
+        font-size: .5rem;
+    }    .item p {
+        font-size: 1rem;
+    }
+    .cover-contact {
+        background-image: url(../images/contact.png);
+    }
+    .location {
+        display: flex;
+        gap: 2rem;
+    }
+    .email {
+        margin-bottom: 4rem;
+    }
+    .sns {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+    .sns-item {
+        flex: 1;
+    }
+}

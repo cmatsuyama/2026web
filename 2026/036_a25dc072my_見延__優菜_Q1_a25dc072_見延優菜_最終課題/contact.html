@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Dog Cafe - CONTACT</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <style>
+        html { font-size: 100%; }
+        body { font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; color: #432; line-height: 1.7; margin: 0; background-color: #fff; }
+        a { text-decoration: none; }
+        img { max-width: 100%; height: auto; }
+        .wrapper { max-width: 1120px; margin: auto; padding: 0 1.5rem; }
+        .align-center { text-align: center; }
+
+        /* 白ヘッダー・肉球ロゴ固定 */
+        .page-header {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .logo { height: 45px; width: auto; display: block; }
+        .main-nav { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+        .main-nav a { color: #333333; font-weight: bold; font-size: 1.2rem; }
+        .main-nav a:hover { color: #0088cc; }
+
+        /* コンタクトカバー */
+        .sub-cover {
+            background-image: url('images/cover-contact-l.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .page-title { font-size: 3rem; color: #ffffff; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); margin: 0; }
+
+        .heading-medium { text-align: center; color: #0088cc; font-weight: bold; margin-bottom: 1.5rem; font-size: 1.8rem; }
+        .location { margin-bottom: 3.5rem; }
+        .location-map iframe { width: 100%; height: 300px; border-radius: 16px; border: 0; }
+        .email { background-color: #faf7f0; border-radius: 24px; padding: 2.5rem; margin: 2rem auto; }
+        .btn { display: inline-block; background-color: #0088cc; color: #fff; border-radius: 8px; padding: 0.6rem 2rem; margin-top: 1rem; font-weight: bold; }
+        .sns { margin-top: 3.5rem; }
+        .sns-youtube iframe { width: 100%; aspect-ratio: 16/9; border-radius: 16px; border: 0; }
+
+        /* フッター */
+        .page-footer { background-image: url('images/footer-l.jpg'); background-size: cover; background-position: center; padding-top: 4rem; margin-top: 4rem; }
+        .info { width: 100%; max-width: 500px; margin: auto; border-spacing: 0; }
+        .info th, .info td { border-bottom: 1px solid #c9c2bc; padding: 0.8rem; }
+        .info th { text-align: left; font-weight: normal; }
+        .copyright { background-color: #432; text-align: center; padding: 1.5rem 0; margin-top: 3rem; color: #fff; }
+
+        @media (min-width: 800px) {
+            .location { display: flex; gap: 2rem; align-items: center; }
+            .location-info, .location-map { flex: 1; }
+            .sns { display: flex; gap: 2rem; }
+            .sns-item { flex: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <h1 style="margin:0;">
+            <a href="index.html"><img class="logo" src="images/logo.png" alt="Smile Dog Cafe"></a>
+        </h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="news.html">News</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sub-cover">
+        <h2 class="page-title">Contact</h2>
+    </div>
+
+    <main class="wrapper">
+        <section class="location">
+            <div class="location-info">
+                <h3 class="heading-medium">Location</h3>
+                <table class="info">
+                    <tr><th>住所</th><td>東京都港区六本木0-0 ○○○</td></tr>
+                    <tr><th>電話</th><td>03-1111-xxxx</td></tr>
+                    <tr><th>営業時間</th><td>10:00 ~ 20:00</td></tr>
+                    <tr><th>店休日</th><td>水曜</td></tr>
+                </table>
+            </div>
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683606!2d139.729043!3d35.662255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b772b1e6d4b%3A0x2f4c1d683a3d5e21!2z5YWt5pys5pyo44OS44Or44K6!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="email align-center">
+            <h3 class="heading-medium">Contact Form</h3>
+            <p>お店へのご質問、貸切のご予約などは、こちらからお気軽にお送りください。</p>
+            <a class="btn" href="#">お問い合わせフォームへ</a>
+        </section>
+
+        <section class="sns">
+            <div class="sns-item">
+                <h3 class="heading-medium">YouTube</h3>
+                <div class="sns-youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iT5My_6P_Uw?si=8amsj944-pxAaCy5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="sns-item align-center">
+                <h3 class="heading-medium">Instagram</h3>
+                <p>毎日可愛いワンちゃんたちの様子をアップしています！</p>
+                <a class="btn" href="#">@wcb_dogcafe</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <table class="info">
+            <tr><th>住所</th><td>東京都港区六本木0-0 ○○○</td></tr>
+            <tr><th>電話</th><td>03-1111-xxxx</td></tr>
+            <tr><th>営業時間</th><td>10:00 ~ 20:00</td></tr>
+            <tr><th>店休日</th><td>水曜</td></tr>
+        </table>
+        <div class="copyright">
+            <small>&copy;Smile Cafe A25DC072 見延優菜</small>
+        </div>
+    </footer>
+
+</body>
+</html>

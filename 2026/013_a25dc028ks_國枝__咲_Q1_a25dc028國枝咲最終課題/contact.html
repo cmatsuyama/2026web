@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kirby Cafe Recommends - Kirby </title>
+        <meta name="description" content="カービィカフェのおすすめ紹介ページ">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/kirby6.png">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+
+
+    .slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    }
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+            .slides img {
+            min-width: 100%;
+            height: 700px;
+            object-fit: cover;
+            border-radius: 16px;
+            }
+            .slider-buttons {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .slider-buttons button {
+                background: #e94b8b;
+                color: #fff;
+                border: none;
+                padding: 8px 14px;
+                margin: 0 5px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+        </style>
+</head>
+
+<body>
+<div class="content-area">
+<div class="sub-cover cover-menu">
+<header class="page-header wrapper">
+<h1 class="align-center">
+<a href="index.html"><img class="logo" src="images/kirby_icon.png.png" alt="Kirby World"></a>
+</h1>
+
+<nav>
+<ul class="main-nav font-english">
+        <li><a href="news.html">Recommends</a></li>
+        <li><a href="menu.html">Characters</a></li>
+        <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+<h2 class="page-title font-english">Kirby Cafe Recommends</h2>
+</div>
+
+<main class="wrapper">
+
+
+<section class="about">
+    <p>
+   カービィカフェは、現在、東京都墨田区押上にある「カービィカフェ TOKYO」と福岡県福岡市博多区にある「カービィカフェ HAKATA」(Kirby Café PETITを除く)の二店舗が存在している。キャラクターを模した料理や実際に登場する料理がメニューになっており、カービィのことを知れば知るほど楽しくなるカフェである。基本的には予約制だが、空いていれば立ち寄ることもできる。店内にはそこら中にカービィとワドルディの姿が見られ、自由に歩いて撮影する事が可能。誕生日のお祝いを事前にお願いすると、店内BGMがバースデーソングになり(変更可能)店員さんがあり得ない声量で店内中に誕生日なことを知らせてくれる。
+    </p>
+</section>
+
+
+<section class="slider-section">
+    <h3 class="heading-large font-english">Cafe Gallery</h3>
+
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="images/cafe1.jpeg" alt="Kirby Cafe 1">
+            <img src="images/cafe3.jpeg" alt="Kirby Cafe 3">
+            <img src="images/cafe4.jpeg" alt="Kirby Cafe 4">
+            <img src="images/cafe5.jpeg" alt="Kirby Cafe 5">
+            <img src="images/cafe6.jpeg" alt="Kirby Cafe 6">
+        </div>
+    </div>
+
+    <div class="slider-buttons">
+        <button onclick="prevSlide()">back</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let index = 0;
+        
+        function showSlide() {
+            const slides = document.getElementById('slides');
+            const width = slides.children[0].clientWidth;
+            slides.style.transform = `translateX(${-index * width}px)`;
+        }
+        
+        function nextSlide() {
+            const slides = document.getElementById('slides');
+        
+            index++;
+        
+            if (index >= slides.children.length) {
+                index = 0;  /* 5→1 */
+            }
+        
+            showSlide();
+        }
+        
+        function prevSlide() {
+            const slides = document.getElementById('slides');
+        
+            index--;
+        
+            if (index < 0) {
+                index = slides.children.length - 1; /* 1→5 */
+            }
+        
+            showSlide();
+        }
+        </script>
+</section>
+
+
+<section class="goods">
+    <h3 class="heading-large font-english">Goods</h3>
+
+    <div class="grid">
+
+        <div class="item item-big">
+            <img src="images/playwithwaddledee.jpg" alt="Play With Waddle Dee">
+            <p>
+                <span class="goods-title">KIRBY play with WADDLEDEE!</span>カービィと仲良さそうに絡んでいるグッズがそろっている。背景の青緑にピンクとオレンジが映えており、オシャレにもふっているグッズの一つだと思う。かなり好き</p>
+        </div>
+
+        <div class="item item-big">
+            <img src="images/colorfulstore.jpeg" alt="Colorful Store">
+            <p> <span class="goods-title">KIRBY COLORFUL STORE</span>かなり様々なところでポップアップが行われていた印象がある。自分で飛べるのに風船をわざわざ持っていてかわいい。カラフルストアという名の通り、赤と青緑、黄色などといった配色で構成されたグッズが多い。しかし全体的な色味としてはビビットというより、ディープトーンやダルトーンに近いため、大人っぽさも感じる。このシリーズが一番好き。</p>
+        </div>
+
+    </div>
+</section>
+
+<footer class="page-footer">
+        <h3 class="heading-large font-english">Information</h3>
+        <table class="info">
+                <tr>
+                        <th>テーマ</th>
+                        <td>カービィカフェ・グッズ紹介</td>
+                </tr>
+                <tr>
+                        <th>世界観</th>
+                        <td>プププランド（ポップスター）</td>
+                </tr>
+                <tr>
+                        <th>おすすめ</th>
+                        <td>カフェメニュー・限定グッズ・フォトスポット</td>
+                </tr>
+        </table>
+
+        <iframe src="https://www.google.co.jp/maps/d/embed?mid=1VRrvrZT1KpJcGpYDLvVZwL-HJI9CauU&ehbc=2E312F" width="640" height="480"></iframe>
+
+        <div class="copyright">
+                <small>&copy; A25DC028 國枝咲  All Rights Reserved.</small>
+        </div>
+
+        <div class="kirby-portal wrapper" style="text-align:center; margin-top:40px;">
+            <p>
+                <a href="https://www.kirby.jp/" target="_blank" style="color:#e94b8b; font-weight:bold; text-decoration:none;">
+                    カービィポータル（公式サイト）
+                </a>
+            </p>
+            <p style="margin-top:8px;">
+                <a href="https://www.pinterest.jp/search/pins/?q=kirby" target="_blank" style="color:#e94b8b; font-weight:bold; text-decoration:none;">
+                    Pinterest（カービィ関連画像）
+                </a>
+            </p>
+            <p style="margin-top:8px; font-size:14px;">
+                Kirby World © Nintendo / HAL Laboratory
+            </p>
+            <p style="margin-top:4px; font-size:13px; color:#666;">
+                アクセス日：2026年7月21日
+            </p>
+        </div>
+
+        
+
+</footer>
+
+</main>
+</div>
+</body>
+</html>

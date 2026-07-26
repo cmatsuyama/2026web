@@ -1,0 +1,43 @@
+
+var ftGUID_8012590="67760B0C84D630";
+var ftConfID_8012590="0";
+var ftParams_8012590="ftOBA=1&ft_domain=www.peko-step.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https://www.peko-step.com/tool/imageeditor/index.php;https%3A%2F%2Fwww.peko-step.com%2Ftool%2Fimageeditor%2Findex.php&us_privacy=${US_PRIVACY}&ft_partnerimpid=ABAjH0g7oRfMBBN3TWx0Ry1H5qOw;ABAjH0g7oRfMBBN3TWx0Ry1H5qOw&site_url=https://www.peko-step.com/tool/imageeditor/index.php&pub_id=1&sup_platform=1&ft_keyword=20854403490;DV360CampID:__20854403490__&cachebuster=399334.6100601256&ft_section=DV360CampID:20854403490";
+var ftKeyword_8012590="";
+var ftCustom_8012590="";
+var ftSection_8012590="DV360CampID:20854403490";
+var ftSegment_8012590="";
+var ftSegmentList_8012590=[];
+var ftRuleMatch_8012590="00010000";
+var ftTimestamp_8012590="1784651732";
+var ftGeoC2_8012590="jp";
+var ftGeoState_8012590="23";
+var ftGeoCity_8012590="oguchi";
+var ftISP_8012590="community network center inc.";
+var ftSpeed_8012590="broadband";
+var ftConnType_8012590="wifi";
+var ftDMA_8012590="392003";
+var ftLong_8012590="136.92";
+var ftLat_8012590="35.35";
+var ftPostal_8012590="480-0141";
+var ftTimeZone_8012590="+900";
+var ftMobileCarrier_8012590="";
+var ftImp8012590 = {};
+ftImp8012590.privacy = "x";
+ftImp8012590.guidAge = "-1";
+ftImp8012590.impID = "0F664D3A-685B-2E82-F299-A85D1E0EAAEC";
+ftImp8012590.duid = "FT:67760B0C84D630";
+
+ftImp8012590.ft_tpplid = "";
+ftImp8012590.ft_c = {};
+ftImp8012590.gdpr = "";
+ftImp8012590.gdpr_consent = "";
+ftImp8012590.gdpr_pd = "";
+ftImp8012590.oob_consent = "";
+ftImp8012590.gdprStoredConsent = "";
+ftImp8012590.us_privacy = "!!US_PRIVACY!";
+ftImp8012590.gpc = "";
+
+ftImp8012590.jsAppend = "1";
+var ftCreativeId_8012590 = "5901764";
+(function(){var tag=document.getElementById("ft_servedby_8012590")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m8012590";js.setAttribute("name","ftscript_m8012590");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("8012590");
+

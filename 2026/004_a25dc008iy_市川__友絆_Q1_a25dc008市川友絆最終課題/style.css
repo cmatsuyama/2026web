@@ -1,0 +1,423 @@
+@charset "UTF-8";
+
+/* -----------------------------------------
+   共通・ベース設定
+----------------------------------------- */
+html {
+    font-size: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #FAF7F0; /* 温かみのある中華風ベージュ */
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+iframe {
+    width: 100%;
+    border: 0;
+}
+
+/* レイアウト・コンテナ */
+.wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/* -----------------------------------------
+   タイポグラフィ・見出し
+----------------------------------------- */
+.font-english {
+    font-family: "Philosopher", sans-serif;
+    font-weight: normal;
+}
+
+.page-title,
+.heading-large,
+.heading-medium {
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-top: 2rem;
+    line-height: 1.4;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.heading-large {
+    font-size: 2.5rem;
+    color: #D32F2F; /* 麻辣の赤 */
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    font-weight: bold;
+}
+
+.heading-medium {
+    font-size: 1.8rem;
+    color: #D32F2F;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* -----------------------------------------
+   共通ボタンデザイン
+----------------------------------------- */
+.btn, .button {
+    display: inline-block;
+    font-size: 1.1rem;
+    background-color: #D32F2F;
+    color: #fff;
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(211,47,47,0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover, .button:hover {
+    background-color: #FBC02D; /* ホバーで華やかなゴールド */
+    color: #222;
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------------
+   ヘッダー・右上ナビゲーション（全ページ共通）
+----------------------------------------- */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.page-header .logo {
+    height: 80px; /* ロゴの大きさを統一 */
+    width: auto;
+    display: block;
+}
+
+/* 右上のナビゲーションメニュー */
+.main-nav {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.main-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.3); /* 背景を少し暗くして文字を見やすく */
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+/* ホバー時（マウスを乗せたとき）の変化 */
+.main-nav li a:hover {
+    background: #D32F2F; /* 麻辣の赤 */
+    color: #fff;
+    border-color: #D32F2F;
+    transform: translateY(-2px);
+}
+
+/* スマホ用の調整（画面が狭いとき） */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .main-nav li a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
+/* -----------------------------------------
+   ヘッダーカバー画像
+----------------------------------------- */
+.cover, .sub-cover {
+    width: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.cover {
+    min-height: 80vh;
+}
+
+.sub-cover {
+    height: 350px;
+    margin-bottom: 3rem;
+}
+
+/* 背景切り替えクラス */
+.cover-home { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(../images/cover-home-l.webp); }
+.cover-menu { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/cover-menu-l.webp); }
+.cover-contact { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/cover-contact-l.webp); }
+
+/* -----------------------------------------
+   コンテンツ・セクション
+----------------------------------------- */
+.about {
+    max-width: 800px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 4rem;
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+/* 頼み方のステップボックス */
+.step-box {
+    background-color: #fff;
+    border-left: 5px solid #D32F2F;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.step-box h4 {
+    font-size: 1.25rem;
+    color: #D32F2F;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* --- 店舗カードの画像調整 --- */
+.shop-card-img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* 角丸で見た目を整える */
+}
+
+.shop-card-img img {
+    width: 100%;
+    height: 250px;          /* 画像の高さを固定（お好みに合わせて調整OK） */
+    object-fit: cover;      /* 💡 横伸びを防ぎ、枠に合わせて綺麗に切り抜く */
+    object-position: center; /* 💡 画像の中心（看板など）を優先して表示 */
+}
+
+/* デスクトップ版（画面幅800px以上）の調整 */
+@media (min-width: 800px) {
+    .shop-card-inner {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .shop-card-img {
+        width: 40%; /* 横幅の割合 */
+        flex-shrink: 0; /* 画像がつぶれるのを防ぐ */
+    }
+    
+    .shop-card-img img {
+        height: 280px; /* PC画面での画像の高さ */
+    }
+
+    .shop-card-text {
+        width: 60%;
+    }
+}
+
+/* -----------------------------------------
+   アクセス（access.html）背景ぼかし設定
+----------------------------------------- */
+.access-bg-container {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: url("../images/cover-sub.jpg") no-repeat center center / cover;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.access-bg-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+}
+
+.access-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 35px;
+    border-radius: 16px;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* -----------------------------------------
+   フッターエリア
+----------------------------------------- */
+footer, .page-footer {
+    background: url("../images/bg-marble.jpg") no-repeat center center / cover;
+    padding: 60px 0 40px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.info {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 0 1rem;
+    border-spacing: 0;
+}
+
+.info th, .info td {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+}
+
+.info th {
+    text-align: left;
+    font-weight: bold;
+    color: #FBC02D;
+    width: 30%;
+}
+
+.info td {
+    color: #fff;
+    text-align: left;
+}
+
+.copyright {
+    background: transparent;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.copyright small, footer p {
+    color: #d4af37; /* 品のあるゴールド */
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* -----------------------------------------
+   レスポンシブ（デスクトップ：800px以上）
+----------------------------------------- */
+@media (min-width: 800px) {
+    .page-title { font-size: 4.5rem; }
+    .heading-large { font-size: 3rem; }
+
+    .logo { width: 210px; }
+    .main-nav { font-size: 1.4rem; gap: 2.5rem; }
+    .sub-cover { height: 400px; }
+
+    .shop-card-inner {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .shop-card-img { width: 40%; }
+    .shop-card-text { width: 60%; }
+
+    .location {
+        display: flex;
+        gap: 2.5rem;
+        align-items: flex-start;
+        margin-top: 3rem;
+    }
+    .location-info { width: 40%; }
+    .location-map { width: 60%; }
+}
+/* PC画面で画像が伸びるのを完全に防ぐ設定 */
+.shop-card-img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* 画像自体の縦横比をキープして中心を表示 */
+.shop-card-img img,
+.shop-preview-img {
+    width: 100% !important;
+    height: 260px !important;     /* 画像の高さを固定 */
+    object-fit: cover !important;   /* 縦横比を崩さず枠いっぱいに収める */
+    object-position: center !important; /* 画像のメイン（中央）を表示 */
+}
+
+/* パソコン画面（画面幅800px以上）のときのレイアウト */
+@media (min-width: 800px) {
+    .shop-card-inner {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .shop-card-img {
+        width: 40% !important;  /* 画像の横幅割合 */
+        flex-shrink: 0;
+    }
+
+    .shop-card-img img {
+        height: 300px !important; /* PCでの画像の高さ */
+    }
+
+    .shop-card-text {
+        width: 60%;
+    }
+}

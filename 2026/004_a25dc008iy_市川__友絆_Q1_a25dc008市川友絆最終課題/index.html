@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麻辣湯 - ホーム</title>
+    <meta name="description" content="本場の味を可愛くオシャレに。名古屋3店舗展開の本格麻辣湯専門店">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .cover-home, .page-footer {
+            width: 100% !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        /* ヒーロービジュアル内のテキスト */
+        .hero-inner {
+            text-align: center;
+            padding: 60px 20px 80px;
+            color: #fff;
+        }
+        .hero-sub {
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-main {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+            line-height: 1.3;
+        }
+
+        /* ボタンデザイン */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #D32F2F;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(211,47,47,0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 10px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        /* 特徴・こだわりセクション */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0 4rem;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid #D32F2F;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* トップページ用 店舗ミニカード */
+        .shop-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        .shop-preview-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .shop-preview-card:hover {
+            transform: translateY(-5px);
+        }
+        .shop-preview-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .shop-preview-body {
+            padding: 1.5rem;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ▼ ヘッダー・ヒーロー部分 ▼ -->
+    <div class="cover cover-home" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/bg-marble.jpg') no-repeat center center / cover;">
+        <header class="page-header wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+            
+            <!-- ロゴ部分 -->
+            <h1 class="align-center" style="margin: 0; flex-shrink: 0;">
+                <a href="index.html" style="display: block;">
+                    <img class="logo" src="images/logo.png" alt="麻辣湯 ホーム" style="height: 100px; width: auto; display: block;">
+                </a>
+            </h1>
+
+            <!-- ナビゲーションメニュー -->
+            <nav>
+                <ul class="main-nav" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="index.html" style="color: #fff; text-decoration: none; font-weight: bold;">ホーム</a></li>
+                    <li><a href="history.html" style="color: #fff; text-decoration: none; font-weight: bold;">麻辣湯の歴史</a></li>
+                    <li><a href="shops.html" style="color: #fff; text-decoration: none; font-weight: bold;">お店紹介</a></li>
+                    <li><a href="access.html" style="color: #fff; text-decoration: none; font-weight: bold;">頼み方ガイド</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero-inner wrapper">
+            <p class="hero-sub font-english">AUTHENTIC SPICE & HERBS</p>
+            <h2 class="hero-main">シビれる辛さとクセになる旨味。<br>自分だけの麻辣淡</h2>
+            <div class="btn-group">
+                <a href="shops.html" class="btn-primary">店舗一覧を見る</a>
+                <a href="history.html" class="btn-secondary">麻辣湯の歴史</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ▼ メインコンテンツ ▼ -->
+    <main class="wrapper" style="margin-top: 3rem;">
+        
+        <!-- コンセプト -->
+        <section class="about" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+            <h2 class="heading-large font-english">Welcome</h2>
+            <h3 style="color: #D32F2F; margin-bottom: 1.5rem;">名古屋で味わう、本場・四川の薬膳麻辣淡</h3>
+            <p style="line-height: 1.8; color: #444;">
+                中国四川省発祥の伝統スパイススープ「麻辣湯（マーラータン）」。<br>
+                当グループでは、名古屋市内にこだわりが異なる3つの店舗（星が丘・栄・名古屋駅）を展開しております。<br>
+                30種類以上の厳選薬膳スパイスとヘルシーな国産春雨、そして50種類を超える新鮮な具材から、あなただけのお気に入りの一杯をお楽しみいただけます。
+            </p>
+        </section>
+
+        <!-- 3つのこだわり（FEATURES） -->
+        <section class="features">
+            <h2 class="heading-large font-english">Our Commitment</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌶️</div>
+                    <h3 style="color: #222; margin-bottom: 0.5rem;">秘伝の薬膳スパイス</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">花椒の痺れる「麻」と唐辛子の辛さ「辣」に、30種以上の漢方生薬を配合した健康スープ。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🥬</div>
+                    <h3 style="color: #222; margin-bottom: 0.5rem;">50種以上の自由な具材</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">新鮮野菜や豆腐、自家製ボールなど、好きな具材をボウルに取って選べるカスタムスタイル。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍜</div>
+                    <h3 style="color: #222; margin-bottom: 0.5rem;">選べるスープ＆辛さ</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">辛さが苦手な方のためのマイルド白湯から本格超激辛まで、その日の気分で自由に調整！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 店舗ピックアップ（写真付き） -->
+        <section class="shops-preview">
+            <h2 class="heading-large font-english">Locations</h2>
+            <p class="align-center" style="margin-bottom: 2rem; color: #666;">お近くの店舗へぜひお越しください</p>
+
+            <div class="shop-preview-grid">
+                <!-- 星が丘店 -->
+                <div class="shop-preview-card">
+                    <img src="images/shop-hoshigaoka.jpg" alt="菊香麻辣湯 星が丘店" class="shop-preview-img">
+                    <div class="shop-preview-body">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">菊香麻辣湯 <span style="font-size: 0.85rem; color: #D32F2F;">(星が丘)</span></h4>
+                        <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">広々としたテーブル席でゆっくり味わえる明るい店内。</p>
+                        <a href="shops.html" style="color: #D32F2F; font-weight: bold; font-size: 0.9rem; text-decoration: none;">詳細を見る →</a>
+                    </div>
+                </div>
+
+                <!-- 栄店 -->
+                <div class="shop-preview-card">
+                    <img src="images/shop-sakae.jpg" alt="七味麻辣湯 栄店" class="shop-preview-img">
+                    <div class="shop-preview-body">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">七味麻辣湯 <span style="font-size: 0.85rem; color: #D32F2F;">(栄)</span></h4>
+                        <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">落ち着いたシックな空間で濃厚な白湯スープをご提供。</p>
+                        <a href="shops.html" style="color: #D32F2F; font-weight: bold; font-size: 0.9rem; text-decoration: none;">詳細を見る →</a>
+                    </div>
+                </div>
+
+                <!-- 名古屋駅店 -->
+                <div class="shop-preview-card">
+                    <img src="images/shop-meieki.jpg" alt="小谷姐姐 名古屋駅店" class="shop-preview-img">
+                    <div class="shop-preview-body">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">小谷姐姐 <span style="font-size: 0.85rem; color: #D32F2F;">(名古屋駅)</span></h4>
+                        <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">圧巻のトッピングケースから選ぶ本場四川スタイルの店舗。</p>
+                        <a href="shops.html" style="color: #D32F2F; font-weight: bold; font-size: 0.9rem; text-decoration: none;">詳細を見る →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ▼ フッター部分 ▼ -->
+    <footer class="page-footer" style="background: url('images/bg-marble.jpg') no-repeat center center / cover; padding: 60px 20px 40px; color: #fff; text-align: center;">
+        <h3 class="heading-large font-english" style="color: #fff; margin-bottom: 20px;">Information</h3>
+        
+        <table class="info" style="margin: 0 auto 30px; background: rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 15px; color: #fff;">
+            <tr><th style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">星が丘店</th><td style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">愛知県名古屋市千種区星が丘元町（菊香麻辣湯）</td></tr>
+            <tr><th style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">栄店</th><td style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">愛知県名古屋市中区栄3丁目（七味麻辣湯）</td></tr>
+            <tr><th style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">名古屋駅店</th><td style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">愛知県名古屋市中村区名駅4丁目（小谷麻辣湯）</td></tr>
+            <tr><th style="padding: 8px 15px; text-align: left;">営業時間</th><td style="padding: 8px 15px; text-align: left;">11:00～22:00（L.O. 21:30）</td></tr>
+        </table>
+        
+        <div class="copyright">
+            <small style="color: #d4af37; font-size: 0.9rem; font-weight: bold;">&copy; 2026 麻辣湯 A25DC008 市川友絆</small>
+        </div>
+    </footer>
+
+</body>
+</html>

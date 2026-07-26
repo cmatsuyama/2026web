@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麻辣湯 - 店舗紹介・麻辣湯とは</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ページ独自のレイアウト・画像スタイルの調整 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* 概要セクション（画像とテキストの2カラム） */
+        .story-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+        }
+        .story-img {
+            flex: 1 1 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .story-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .story-text {
+            flex: 2 1 350px;
+        }
+
+        /* STEPガイドのデザイン */
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+        .step-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid #D32F2F;
+            transition: transform 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        .step-num {
+            display: inline-block;
+            background: #D32F2F;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #faf7f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .step-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* お問い合わせカード */
+        .email-box {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin: 0 auto 4rem;
+            border: 2px solid #D32F2F;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ▼ ヘッダー・サブカバー ▼ -->
+<div class="sub-cover" style="background: url('images/bg-marble.jpg') no-repeat center center / cover;">
+    <header class="page-header wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+        <h1 class="align-center" style="margin: 0; flex-shrink: 0;">
+            <a href="index.html" style="display: block;">
+                <img class="logo" src="images/logo.png" alt="麻辣湯 ホーム" style="height: 100px; width: auto; display: block;">
+            </a>
+        </h1>
+
+        <!-- ナビゲーションメニュー -->
+        <nav>
+            <ul class="main-nav" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: #fff; text-decoration: none; font-weight: bold;">ホーム</a></li>
+                <li><a href="history.html" style="color: #fff; text-decoration: none; font-weight: bold;">麻辣湯の歴史</a></li>
+                <li><a href="shops.html" style="color: #fff; text-decoration: none; font-weight: bold;">お店紹介</a></li>
+                <li><a href="access.html" style="color: #fff; text-decoration: none; font-weight: bold;">頼み方ガイド</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+</div>
+    <!-- ▼ メインコンテンツ ▼ -->
+    <main class="wrapper">
+        
+        <!-- 麻辣湯とは？（写真付きストーリー） -->
+        <section class="about-malatang">
+            <h2 class="heading-large font-english">What is Malatang?</h2>
+            
+            <div class="story-container">
+                <div class="story-img">
+                    <img src="images/about-malatang.jpg" alt="本格薬膳麻辣湯">
+                </div>
+                <div class="story-text">
+                    <h3 class="heading-medium" style="text-align: left; margin-top: 0;">麻辣湯（マーラータン）のルーツと特徴</h3>
+                    <p>
+                        麻辣湯は中国四川省発祥の伝統的なスープ料理です。「麻（マー）」は痺れる花椒、「辣（ラー）」は辛い唐辛子を意味します。<br><br>
+                        当店では薬膳効果の高い30種類以上のスパイスと、モチモチでヘルシーな国産春雨を使用。美容と健康にも嬉しい、極上の一杯をお届けします。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 注文ステップ（写真付きカード） -->
+            <div class="order-guide">
+                <h2 class="heading-large font-english">How to Order</h2>
+                <h3 class="heading-medium align-center" style="font-size: 1.5rem; color: #666;">麻辣湯のたのしみ方</h3>
+                
+                <div class="step-grid">
+                    <div class="step-card">
+                        <span class="step-num">STEP 1</span>
+                        <div class="step-icon">
+                            <img src="images/step1-bowl.jpg" alt="ボウルを取る">
+                        </div>
+                        <h4>ボウルを取る</h4>
+                        <p>入口のボウルとトングを持ってトッピングコーナーへ。</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">STEP 2</span>
+                        <div class="step-icon">
+                            <img src="images/step2-ingredients.jpg" alt="具材を選ぶ">
+                        </div>
+                        <h4>具材を選ぶ</h4>
+                        <p>新鮮な野菜やお肉、練り物など50種以上から自由にチョイス！</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">STEP 3</span>
+                        <div class="step-icon">
+                            <img src="images/step3-spice.jpg" alt="辛さを指定">
+                        </div>
+                        <h4>辛さを指定</h4>
+                        <p>マイルドな0辛（白湯）から激辛の5辛まで、お好みで調整可能。</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">STEP 4</span>
+                        <div class="step-icon">
+                            <img src="images/step4-eat.jpg" alt="実食">
+                        </div>
+                        <h4>実食！</h4>
+                        <p>量り売りでお会計後、アツアツ出来立てをご堪能ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section class="email-box">
+            <h3 class="heading-medium font-english" style="margin-top:0;">Contact Us</h3>
+            <p>ご質問やメディア取材、貸切のご相談などは下記よりお気軽にご連絡ください。</p>
+            <br>
+            <a class="btn font-english" href="mailto:example@example.com">Send Email</a>
+        </section>
+
+    </main>
+
+    <!-- ▼ フッター ▼ -->
+    <footer class="page-footer" style="background: url('images/bg-marble.jpg') no-repeat center center / cover; padding: 60px 20px 40px; color: #fff; text-align: center;">
+        <h3 class="heading-large font-english" style="color: #fff; margin-bottom: 20px;">Information</h3>
+        
+        <table class="info" style="margin: 0 auto 30px; background: rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 15px; color: #fff;">
+            <tr><th style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">星が丘店</th><td style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">愛知県名古屋市千種区星が丘元町（菊香麻辣湯）</td></tr>
+            <tr><th style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">栄店</th><td style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">愛知県名古屋市中区栄3丁目（七味麻辣湯）</td></tr>
+            <tr><th style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">名古屋駅店</th><td style="padding: 8px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2);">愛知県名古屋市中村区名駅4丁目（小谷麻辣湯）</td></tr>
+            <tr><th style="padding: 8px 15px; text-align: left;">営業時間</th><td style="padding: 8px 15px; text-align: left;">11:00～22:00（L.O. 21:30）</td></tr>
+        </table>
+        
+        <div class="copyright" style="background: transparent; margin-top: 2rem;">
+            <small style="color: #d4af37; font-size: 0.9rem; font-weight: bold;">&copy; 2026 麻辣湯 A25DC008 市川友絆</small>
+        </div>
+    </footer>
+
+</body>
+</html>
